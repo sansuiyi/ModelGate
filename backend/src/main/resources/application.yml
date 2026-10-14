@@ -1,0 +1,48 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: ModelGate
+  jackson:
+    default-property-inclusion: non_null
+    property-naming-strategy: SNAKE_CASE
+    serialization:
+      fail-on-empty-beans: false
+    deserialization:
+      fail-on-unknown-properties: false
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+server:
+  port: 8000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: always
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+modelgate:
+  openrouter:
+    api-key: ${OPENROUTER_API_KEY:}
+    base-url: https://openrouter.ai/api/v1
+    extraction-model: openai/gpt-5.4
+    connect-timeout-ms: 10000
+    read-timeout-ms: 60000
+  classifier:
+    gguf-path: ${CLASSIFIER_GGUF_PATH:}
+    n-ctx: 512
+    n-gpu-layers: -1
+  data:
+    fallback-profiles-dir: ./backend/data/fallback_profiles

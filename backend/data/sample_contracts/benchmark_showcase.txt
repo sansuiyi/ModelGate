@@ -1,0 +1,119 @@
+EduAssist Online — AI Tutoring Platform Agreement
+Contract ID: EA-2026-0455
+Effective Date: March 15, 2026
+
+PARTIES
+This agreement is entered between Assurant, Inc. ("Provider") and EduAssist Online,
+Inc. ("Customer") for the deployment of AI-powered academic tutoring and assessment
+services.
+
+SECTION 1 — SERVICE DESCRIPTION
+Provider shall deploy an AI-powered Academic Tutoring Platform ("Platform") for
+EduAssist Online's student-facing tutoring and internal content review services. The
+Platform shall support the following functions:
+
+1.1 Tier 1 — Student Self-Service Tutor
+    An AI-powered tutor serving students directly, handling:
+    - Basic math and arithmetic practice (elementary through middle school)
+    - History and civics fact-check questions
+    - Computer science fundamentals (data structures, binary, terminology)
+    - General knowledge and vocabulary queries
+
+1.2 Tier 2 — Advanced Academic Support
+    An AI-powered assistant for advanced coursework, handling:
+    - College-level biology, chemistry, and physics problem solving
+    - Abstract algebra and proof-based mathematics
+    - Formal logic, propositional calculus, and argument analysis
+    - Multi-step scientific reasoning and research synthesis
+
+SECTION 2 — DATA HANDLING AND PRIVACY
+2.1 Student data is classified as containing PII under FERPA (Family Educational
+    Rights and Privacy Act) and COPPA (Children's Online Privacy Protection Act).
+2.2 All data must be processed within US-based data centers.
+2.3 No student PII shall be used for model training or fine-tuning.
+2.4 Data retention: 1 year for session logs, 5 years for assessment records.
+2.5 All data encrypted at rest (AES-256) and in transit (TLS 1.3+).
+
+SECTION 3 — APPROVED AI PROVIDERS
+3.1 EduAssist Online approves the following AI model providers:
+    - OpenAI (GPT model family)
+    - Anthropic (Claude model family)
+    - Google (Gemini model family)
+3.2 The following providers are explicitly prohibited:
+    - DeepSeek (Hangzhou DeepSeek Artificial Intelligence Co., Ltd.)
+    - Baidu (ERNIE / Wenxin model family)
+    - Alibaba (Qwen / Tongyi model family)
+    - Any AI model provider headquartered in the People's Republic of China
+    Basis: COPPA compliance and institutional data sovereignty policy.
+3.3 Provider may not substitute providers without 14-day advance written notice.
+
+SECTION 4 — PERFORMANCE REQUIREMENTS
+4.1 Tier 1 — Student Self-Service Performance Targets
+    4.1.1 Standard queries (fact checks, definitions, basic math):
+          Response delivery within 1000ms at the 95th percentile.
+    4.1.2 The system MUST prioritize response speed and cost efficiency for
+          elementary-level queries. Using premium reasoning models for basic
+          factual questions is explicitly prohibited as wasteful.
+
+4.2 Tier 2 — Advanced Academic Support Performance Targets
+    4.2.1 Complex reasoning tasks (proofs, multi-step analysis):
+          Response delivery within 8000ms at the 95th percentile.
+    4.2.2 Accuracy is the PRIMARY metric for Tier 2. The system must use
+          models with strong reasoning capabilities for abstract mathematics,
+          formal logic, and advanced scientific analysis.
+    4.2.3 Provider shall route complex academic queries to reasoning-capable
+          model tiers. Economy-tier models are not permitted for proof-based
+          mathematics or formal logic queries.
+
+4.3 System Uptime SLA: 99.5%
+
+SECTION 5 — COST AND BILLING
+5.1 EduAssist Online operates on a strict cost-efficiency model:
+    - Tier 1 (Student Self-Service): MUST use the cheapest compliant model.
+      Simple factual questions do not require reasoning or premium models.
+      Cost per query must average below $0.001 for Tier 1 interactions.
+    - Tier 2 (Advanced Academic): Quality justifies premium model usage.
+      Cost per query may reach up to $0.05 for complex reasoning tasks.
+
+5.2 Monthly AI inference budget: $8,000
+    - Projected split: 70% Tier 1 volume but only 15% of cost
+    - Projected split: 30% Tier 2 volume but 85% of cost
+    - Intelligent routing is CRITICAL to staying within budget.
+
+5.3 Provider shall deliver weekly cost reports showing:
+    - Queries routed to economy models vs premium models
+    - Average cost per query by difficulty tier
+    - Percentage of queries correctly downtiered to economy models
+    - Estimated savings vs using premium models for all queries
+
+5.4 Key cost optimization metric: The router MUST demonstrate at least 60%
+    cost savings compared to routing all queries to the premium model tier,
+    while maintaining 90%+ accuracy on both simple and complex queries.
+
+SECTION 6 — USE CASE SPECIFICATIONS
+6.1 Tier 1 — Student Self-Service Tutor
+    Expected daily volume: approximately 15,000 queries per day
+    Estimated query distribution:
+        - Simple queries (basic math, definitions, factual Q&A): 70%
+        - Medium queries (multi-step word problems, explanations): 20%
+        - Complex queries (proof assistance, formal reasoning): 10%
+
+6.2 Tier 2 — Advanced Academic Support
+    User base: approximately 5,000 active advanced students
+    Expected daily volume: approximately 3,000 queries per day
+    Estimated query distribution:
+        - Simple queries (formula lookups, terminology): 20%
+        - Medium queries (problem solving, lab analysis): 40%
+        - Complex queries (proofs, research synthesis, formal logic): 40%
+
+6.3 Subject Coverage
+    The Platform must support queries across the following MMLU benchmark
+    categories to validate cross-domain academic coverage:
+    - Elementary Mathematics
+    - High School US History
+    - High School Computer Science
+    - College Biology
+    - Abstract Algebra
+    - Formal Logic
+
+6.4 Supported languages: English, Spanish

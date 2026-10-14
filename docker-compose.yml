@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  modelgate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+      - "3000:3000"
+    environment:
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+    volumes:
+      - modelgate-data:/app/backend/data
+    restart: unless-stopped
+
+volumes:
+  modelgate-data:

@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" fill="none">
+  <defs>
+    <clipPath id="roundCorners">
+      <rect width="1200" height="460" rx="16" ry="16"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#roundCorners)">
+  <defs>
+    <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700&amp;family=DM+Mono:wght@400;500&amp;display=swap');
+      .dash-flow { animation: dashFlow 2s linear infinite; }
+      @keyframes dashFlow { to { stroke-dashoffset: -20; } }
+    </style>
+
+    <pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="0.5" fill="#C0C0C0"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="460" fill="#F7F7F7"/>
+  <rect width="1200" height="460" fill="url(#dots)"/>
+
+  <!-- ═══════════ TITLE ═══════════ -->
+
+  <text x="60" y="80" font-family="'DM Sans', Helvetica, Arial, sans-serif" font-size="54" font-weight="700" fill="#0A0A0A" letter-spacing="-2">ModelGate</text>
+  <text x="63" y="110" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#555" letter-spacing="0.3">Contract-aware AI routing for enterprise</text>
+
+  <!-- Accent line -->
+  <rect x="63" y="124" width="44" height="3" rx="1.5" fill="#0A0A0A"/>
+
+  <!-- ═══════════ ROUTING VISUALIZATION ═══════════ -->
+
+  <!-- Input lines -->
+  <g opacity="0.15">
+    <line x1="0" y1="200" x2="105" y2="200" stroke="#666"/>
+    <line x1="0" y1="222" x2="105" y2="222" stroke="#666"/>
+    <line x1="0" y1="244" x2="105" y2="244" stroke="#666"/>
+  </g>
+
+  <!-- Router node -->
+  <circle cx="148" cy="222" r="24" fill="white" stroke="#0A0A0A" stroke-width="2.5"/>
+  <text x="148" y="228" text-anchor="middle" font-family="'DM Mono', 'Courier New', monospace" font-size="15" font-weight="500" fill="#0A0A0A" letter-spacing="0.5">MG</text>
+
+  <!-- Pulsing ring -->
+  <circle cx="148" cy="222" r="30" fill="none" stroke="#0A0A0A" stroke-width="0.8" opacity="0.12">
+    <animate attributeName="r" values="30;40;30" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.12;0;0.12" dur="3s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Output curves -->
+  <path d="M172,213 C215,205 255,178 345,172" stroke="#0A0A0A" stroke-width="1.2" opacity="0.18" stroke-dasharray="4 6" class="dash-flow"/>
+  <path d="M172,222 C215,222 255,222 345,222" stroke="#0A0A0A" stroke-width="1.2" opacity="0.18" stroke-dasharray="4 6" class="dash-flow"/>
+  <path d="M172,231 C215,240 255,268 345,274" stroke="#0A0A0A" stroke-width="1.2" opacity="0.18" stroke-dasharray="4 6" class="dash-flow"/>
+
+  <!-- Endpoint dots and labels -->
+  <circle cx="351" cy="172" r="3.5" fill="#0A0A0A" opacity="0.25"/>
+  <text x="364" y="169" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#666" font-weight="500">$0.15/M</text>
+  <text x="364" y="182" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#666">gpt-4o-mini</text>
+
+  <circle cx="351" cy="222" r="3.5" fill="#0A0A0A" opacity="0.25"/>
+  <text x="364" y="219" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#666" font-weight="500">$0.25/M</text>
+  <text x="364" y="232" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#666">gemini-flash-lite</text>
+
+  <circle cx="351" cy="274" r="3.5" fill="#0A0A0A" opacity="0.25"/>
+  <text x="364" y="271" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#666" font-weight="500">$2.50/M</text>
+  <text x="364" y="284" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#666">gpt-5.4</text>
+
+  <!-- Particles -->
+  <circle r="2.5" fill="#0A0A0A">
+    <animateMotion dur="2s" repeatCount="indefinite" path="M172,213 C215,205 255,178 345,172"/>
+    <animate attributeName="opacity" values="0;0.6;0.6;0" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="2" fill="#0A0A0A">
+    <animateMotion dur="2s" repeatCount="indefinite" path="M172,213 C215,205 255,178 345,172" begin="0.7s"/>
+    <animate attributeName="opacity" values="0;0.45;0.45;0" dur="2s" repeatCount="indefinite" begin="0.7s"/>
+  </circle>
+  <circle r="2" fill="#0A0A0A">
+    <animateMotion dur="2s" repeatCount="indefinite" path="M172,213 C215,205 255,178 345,172" begin="1.3s"/>
+    <animate attributeName="opacity" values="0;0.45;0.45;0" dur="2s" repeatCount="indefinite" begin="1.3s"/>
+  </circle>
+  <circle r="2.5" fill="#0A0A0A">
+    <animateMotion dur="1.8s" repeatCount="indefinite" path="M172,222 C215,222 255,222 345,222"/>
+    <animate attributeName="opacity" values="0;0.6;0.6;0" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="2" fill="#0A0A0A">
+    <animateMotion dur="1.8s" repeatCount="indefinite" path="M172,222 C215,222 255,222 345,222" begin="0.9s"/>
+    <animate attributeName="opacity" values="0;0.45;0.45;0" dur="1.8s" repeatCount="indefinite" begin="0.9s"/>
+  </circle>
+  <circle r="2.5" fill="#0A0A0A">
+    <animateMotion dur="2.4s" repeatCount="indefinite" path="M172,231 C215,240 255,268 345,274"/>
+    <animate attributeName="opacity" values="0;0.6;0.6;0" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Input particles -->
+  <circle r="2" fill="#0A0A0A">
+    <animateMotion dur="1.2s" repeatCount="indefinite" path="M0,200 L148,222"/>
+    <animate attributeName="opacity" values="0;0.35;0" dur="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="2" fill="#0A0A0A">
+    <animateMotion dur="1.2s" repeatCount="indefinite" path="M0,222 L148,222" begin="0.4s"/>
+    <animate attributeName="opacity" values="0;0.35;0" dur="1.2s" repeatCount="indefinite" begin="0.4s"/>
+  </circle>
+  <circle r="2" fill="#0A0A0A">
+    <animateMotion dur="1.2s" repeatCount="indefinite" path="M0,244 L148,222" begin="0.8s"/>
+    <animate attributeName="opacity" values="0;0.35;0" dur="1.2s" repeatCount="indefinite" begin="0.8s"/>
+  </circle>
+
+  <!-- ═══════════ COST CHART ═══════════ -->
+
+  <text x="560" y="62" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#555" font-weight="500" letter-spacing="1.5">MONTHLY COST AT 10K REQUESTS</text>
+
+  <!-- Y axis -->
+  <text x="553" y="100" text-anchor="end" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#777" font-weight="400">$4</text>
+  <text x="553" y="160" text-anchor="end" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#777" font-weight="400">$3</text>
+  <text x="553" y="220" text-anchor="end" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#777" font-weight="400">$2</text>
+  <text x="553" y="280" text-anchor="end" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#777" font-weight="400">$1</text>
+  <text x="553" y="340" text-anchor="end" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#777" font-weight="400">$0</text>
+
+  <!-- Grid -->
+  <g stroke="#DCDCDC" stroke-width="0.5">
+    <line x1="565" y1="97" x2="1120" y2="97"/>
+    <line x1="565" y1="157" x2="1120" y2="157"/>
+    <line x1="565" y1="217" x2="1120" y2="217"/>
+    <line x1="565" y1="277" x2="1120" y2="277"/>
+    <line x1="565" y1="337" x2="1120" y2="337"/>
+  </g>
+
+  <!-- Always-premium line at $3.83 → y ≈ 104 -->
+  <line x1="565" y1="104" x2="1120" y2="104" stroke="#0A0A0A" stroke-width="1.2" opacity="0.25" stroke-dasharray="6 4"/>
+  <text x="1110" y="92" text-anchor="end" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#555" font-weight="500">$3.83 always premium</text>
+
+  <!-- ModelGate cost curve animated -->
+  <path d="M565,104 C625,104 665,104 715,104 S800,104 870,104 S970,104 1060,104 S1100,104 1120,104" stroke="#0A0A0A" stroke-width="2.5" fill="none">
+    <animate attributeName="d"
+      values="M565,104 C625,104 665,104 715,104 S800,104 870,104 S970,104 1060,104 S1100,104 1120,104;
+              M565,104 C625,108 665,130 715,170 S800,220 870,237 S970,245 1060,247 S1100,247 1120,247"
+      dur="2.5s" fill="freeze" begin="0.8s" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+  </path>
+
+  <!-- Area fill -->
+  <path d="M565,104 C625,104 665,104 715,104 S800,104 870,104 S970,104 1060,104 S1100,104 1120,104 L1120,337 L565,337 Z" fill="url(#areaFill)" opacity="0">
+    <animate attributeName="d"
+      values="M565,104 C625,104 665,104 715,104 S800,104 870,104 S970,104 1060,104 S1100,104 1120,104 L1120,337 L565,337 Z;
+              M565,104 C625,108 665,130 715,170 S800,220 870,237 S970,245 1060,247 S1100,247 1120,247 L1120,337 L565,337 Z"
+      dur="2.5s" fill="freeze" begin="0.8s" calcMode="spline" keySplines="0.25 0.1 0.25 1"/>
+    <animate attributeName="opacity" values="0;0;0.8" dur="3.3s" fill="freeze"/>
+  </path>
+
+  <!-- ModelGate price label -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;0;1" dur="4s" fill="freeze"/>
+    <text x="1110" y="275" text-anchor="end" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#0A0A0A" font-weight="500">$1.58 ModelGate</text>
+  </g>
+
+  <!-- Savings callout -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;0;0;1" dur="5s" fill="freeze"/>
+    <!-- Connecting line from premium to router -->
+    <line x1="840" y1="104" x2="840" y2="247" stroke="#0A0A0A" stroke-width="1" stroke-dasharray="3 3" opacity="0.2"/>
+    <line x1="834" y1="104" x2="846" y2="104" stroke="#0A0A0A" stroke-width="1" opacity="0.2"/>
+    <line x1="834" y1="247" x2="846" y2="247" stroke="#0A0A0A" stroke-width="1" opacity="0.2"/>
+    <!-- Label centered on the bracket -->
+    <text x="858" y="180" font-family="'DM Sans', Helvetica, sans-serif" font-size="28" font-weight="700" fill="#0A0A0A">59%</text>
+    <text x="858" y="196" font-family="'DM Mono', 'Courier New', monospace" font-size="13" fill="#555">saved</text>
+  </g>
+
+  <!-- Legend -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1" dur="4.5s" fill="freeze"/>
+    <line x1="660" y1="354" x2="680" y2="354" stroke="#0A0A0A" stroke-width="1.2" stroke-dasharray="6 4" opacity="0.25"/>
+    <text x="688" y="358" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#666">always premium</text>
+    <line x1="840" y1="354" x2="860" y2="354" stroke="#0A0A0A" stroke-width="2.5"/>
+    <text x="868" y="358" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#666">with ModelGate</text>
+  </g>
+
+  <!-- ═══════════ BOTTOM STATS ═══════════ -->
+
+  <line x1="60" y1="385" x2="1120" y2="385" stroke="#DCDCDC" stroke-width="1"/>
+
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1" dur="2s" fill="freeze" begin="0.3s"/>
+    <text x="60" y="422" font-family="'DM Sans', Helvetica, sans-serif" font-size="28" font-weight="700" fill="#0A0A0A">85%</text>
+    <text x="60" y="442" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#666" font-weight="400">MMLU accuracy</text>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1" dur="2s" fill="freeze" begin="0.6s"/>
+    <text x="200" y="422" font-family="'DM Sans', Helvetica, sans-serif" font-size="28" font-weight="700" fill="#0A0A0A">59%</text>
+    <text x="200" y="442" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#666" font-weight="400">cost savings</text>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1" dur="2s" fill="freeze" begin="0.9s"/>
+    <text x="340" y="422" font-family="'DM Sans', Helvetica, sans-serif" font-size="28" font-weight="700" fill="#0A0A0A">62ms</text>
+    <text x="340" y="442" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#666" font-weight="400">classification</text>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1" dur="2s" fill="freeze" begin="1.2s"/>
+    <text x="500" y="422" font-family="'DM Sans', Helvetica, sans-serif" font-size="28" font-weight="700" fill="#0A0A0A">83.3%</text>
+    <text x="500" y="442" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#666" font-weight="400">fine-tuned router</text>
+  </g>
+
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1" dur="2s" fill="freeze" begin="1.5s"/>
+    <text x="680" y="422" font-family="'DM Sans', Helvetica, sans-serif" font-size="28" font-weight="700" fill="#0A0A0A">1 line</text>
+    <text x="680" y="442" font-family="'DM Mono', 'Courier New', monospace" font-size="15" fill="#666" font-weight="400">integration</text>
+  </g>
+
+  <!-- Badges -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1" dur="2s" fill="freeze" begin="1.8s"/>
+    <rect x="870" y="408" width="120" height="32" rx="16" fill="#0A0A0A"/>
+    <text x="930" y="429" text-anchor="middle" font-family="'DM Mono', 'Courier New', monospace" font-size="13" fill="white" font-weight="500">KSU 2026</text>
+
+    <rect x="1002" y="408" width="145" height="32" rx="16" fill="white" stroke="#0A0A0A" stroke-width="1.5"/>
+    <text x="1074" y="429" text-anchor="middle" font-family="'DM Mono', 'Courier New', monospace" font-size="13" fill="#0A0A0A" font-weight="500">winning project</text>
+  </g>
+</g>
+</svg>

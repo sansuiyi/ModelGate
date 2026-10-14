@@ -1,0 +1,404 @@
+[
+  {
+    "prompt": "What is your return policy?",
+    "expected_route": "simple",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "How do I track my order?",
+    "expected_route": "simple",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "What are your business hours?",
+    "expected_route": "simple",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "Can I change my shipping address?",
+    "expected_route": "simple",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "Where is my refund?",
+    "expected_route": "simple",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "Do you ship internationally?",
+    "expected_route": "simple",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "How do I reset my password?",
+    "expected_route": "simple",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "What payment methods do you accept?",
+    "expected_route": "simple",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "Is there a warranty on this product?",
+    "expected_route": "simple",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "How long does shipping take?",
+    "expected_route": "simple",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "What is the status of order #45821?",
+    "expected_route": "simple",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "Can I get a receipt for my last purchase?",
+    "expected_route": "simple",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "Do you have this item in blue?",
+    "expected_route": "simple",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "What's the phone number for customer service?",
+    "expected_route": "simple",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "How do I cancel my subscription?",
+    "expected_route": "simple",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "I received a damaged item and need to process a return with a replacement. The item was a wireless keyboard ordered on March 3rd, order number #38291. The packaging was crushed and the keyboard has a cracked spacebar.",
+    "expected_route": "medium",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "Can you explain the warranty coverage for my electronics purchase from last month? I bought a laptop and a monitor and I'm not sure if accidental damage is included.",
+    "expected_route": "medium",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "I need help troubleshooting why my device isn't connecting to WiFi after the latest firmware update. I've tried restarting both the router and the device.",
+    "expected_route": "medium",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "Please summarize my recent order history and highlight any pending returns or exchanges that haven't been processed yet.",
+    "expected_route": "medium",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "Compare the protection plans available for my new laptop purchase. I want to understand the difference between the basic and premium tiers.",
+    "expected_route": "medium",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "Walk me through the process of filing a warranty claim for multiple items purchased in the same order. Two of the three items arrived defective.",
+    "expected_route": "medium",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "My order was supposed to arrive three days ago. Can you explain what's causing the delay and whether I should expect it this week?",
+    "expected_route": "medium",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "I want to upgrade my current protection plan to include accidental damage coverage. Can you describe what changes and what the cost difference would be?",
+    "expected_route": "medium",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "I have multiple ongoing warranty claims across three different product categories — a laptop, a kitchen appliance, and a fitness tracker — and I need a comprehensive resolution strategy that considers the different warranty terms, return windows, and replacement options for each product, including whether any of them qualify for an expedited replacement under the premium protection plan I purchased.",
+    "expected_route": "complex",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "Analyze my account history over the past 12 months and identify any patterns in the service issues I've reported. I want to understand if there's a systemic quality problem with products from a specific supplier or category, and whether I should consider switching to a different product line.",
+    "expected_route": "complex",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "I need a detailed comparison of all protection plan options considering my usage patterns across five devices, the age of each device, my full claim history, and any upcoming renewal dates. Determine the optimal coverage strategy that minimizes my total cost of ownership while maximizing coverage for the devices most likely to need repair based on historical failure rates.",
+    "expected_route": "complex",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "I've been charged incorrectly on three separate invoices over the last quarter and each one involves a different discount code, promotional rate, and tax jurisdiction. I need you to thoroughly review each invoice line by line, identify exactly where the billing errors occurred, calculate the total amount I'm owed, and recommend whether I should request a credit or a direct refund given my account standing and future orders.",
+    "expected_route": "complex",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "Evaluate the full lifecycle cost of my current product ecosystem versus switching to a competitor's ecosystem, factoring in remaining warranty coverage, trade-in values, accessory compatibility, and the migration effort required. Provide a recommendation with supporting reasoning.",
+    "expected_route": "complex",
+    "customer": "acme-support",
+    "domain": "customer_support"
+  },
+  {
+    "prompt": "What is the policy number for claim #4521?",
+    "expected_route": "simple",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "Show me the status of pending claims for region NE.",
+    "expected_route": "simple",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "What is the deductible for plan type B?",
+    "expected_route": "simple",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "List all adjusters assigned to auto claims.",
+    "expected_route": "simple",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "What's the claim limit for policy #7890?",
+    "expected_route": "simple",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "Show open claims count for this quarter.",
+    "expected_route": "simple",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "Who is the adjuster for claim #6655?",
+    "expected_route": "simple",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "What's the filing deadline for property claims in Texas?",
+    "expected_route": "simple",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "Is claim #9012 still under review?",
+    "expected_route": "simple",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "What's the current reserve amount on claim #3344?",
+    "expected_route": "simple",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "Summarize the medical records and coverage analysis for claim #7823. The claimant has submitted documentation from three different providers and I need to understand the treatment timeline.",
+    "expected_route": "medium",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "Compare the settlement amounts for similar property damage claims in the Southeast region this quarter. I want to see if our reserves are in line with recent outcomes.",
+    "expected_route": "medium",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "Extract the key liability factors from the accident report attached to claim #6104. Focus on the contributing factors, witness statements, and any citations issued.",
+    "expected_route": "medium",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "Review the subrogation potential for the batch of claims from the March flooding event. Identify which ones have viable recovery prospects and estimate the total recoverable amount.",
+    "expected_route": "medium",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "Explain the coverage overlap between the primary and secondary policies on claim #5522. The policyholder has both a personal auto policy and a commercial fleet policy that may apply.",
+    "expected_route": "medium",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "Summarize the damage assessment report for the commercial property claim #8810 and flag any items that exceed our standard reserve guidelines.",
+    "expected_route": "medium",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "How does the policyholder's prior loss history affect the current claim? Pull their last five years of claims and describe any patterns.",
+    "expected_route": "medium",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "Analyze the multi-party liability exposure across claims #8901, #8902, and #8903 from the warehouse incident. Consider the overlapping coverage from the property owner's policy, the tenant's commercial general liability, and the contractor's professional liability. Assess subrogation potential against the electrical contractor and determine whether our current reserves adequately reflect the combined exposure.",
+    "expected_route": "complex",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "Evaluate the fraud indicators across the last 50 auto claims from the Southeast region. Cross-reference claimant addresses, repair shop frequency, and medical provider patterns. Identify anomaly clusters and recommend investigation priorities ranked by estimated exposure and likelihood of recovery.",
+    "expected_route": "complex",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "Perform a comprehensive coverage analysis for the commercial property claim involving multiple structures, business interruption losses, environmental liability from chemical storage, and potential ordinance-or-law coverage triggers. The policy has three endorsements that may modify coverage and a pollution exclusion that the policyholder is contesting.",
+    "expected_route": "complex",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "Review the entire Q1 claims portfolio for the commercial auto line. Identify loss development trends, compare actual-to-expected loss ratios by coverage type, flag any claims with reserve adequacy concerns, and recommend adjustments with actuarial justification. Include a projection of ultimate loss for the accident year based on current development patterns.",
+    "expected_route": "complex",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "Assess the legal exposure on the disputed workers' compensation claim #7401. The claimant alleges a pre-existing condition was aggravated by workplace conditions, the employer contests causal relationship, and there are conflicting IME reports. Review all medical documentation, deposition summaries, and jurisdictional case law to recommend a settlement strategy versus litigation path with estimated costs for each.",
+    "expected_route": "complex",
+    "customer": "globex-claims",
+    "domain": "insurance_claims"
+  },
+  {
+    "prompt": "Is my Samsung Care+ plan still active?",
+    "expected_route": "simple",
+    "customer": "samsung-care",
+    "domain": "device_protection"
+  },
+  {
+    "prompt": "What's the deductible for a screen replacement on my Galaxy S25?",
+    "expected_route": "simple",
+    "customer": "samsung-care",
+    "domain": "device_protection"
+  },
+  {
+    "prompt": "Where is the nearest Samsung-authorized repair center?",
+    "expected_route": "simple",
+    "customer": "samsung-care",
+    "domain": "device_protection"
+  },
+  {
+    "prompt": "Am I eligible to file a claim on my Galaxy Z Fold?",
+    "expected_route": "simple",
+    "customer": "samsung-care",
+    "domain": "device_protection"
+  },
+  {
+    "prompt": "What's the status of my replacement device?",
+    "expected_route": "simple",
+    "customer": "samsung-care",
+    "domain": "device_protection"
+  },
+  {
+    "prompt": "How long does a screen repair usually take?",
+    "expected_route": "simple",
+    "customer": "samsung-care",
+    "domain": "device_protection"
+  },
+  {
+    "prompt": "Does my plan cover liquid damage?",
+    "expected_route": "simple",
+    "customer": "samsung-care",
+    "domain": "device_protection"
+  },
+  {
+    "prompt": "Can I transfer my Care+ plan to a new device?",
+    "expected_route": "simple",
+    "customer": "samsung-care",
+    "domain": "device_protection"
+  },
+  {
+    "prompt": "My Galaxy S25 screen is cracked and there's also some liquid damage around the charging port. I need help figuring out whether to file separate claims or one combined claim, and whether repair or replacement makes more sense given my remaining coverage.",
+    "expected_route": "medium",
+    "customer": "samsung-care",
+    "domain": "device_protection"
+  },
+  {
+    "prompt": "Circle to Search stopped working on my Galaxy S25 Ultra after the last software update. I've cleared the cache and restarted the phone. Can you help me troubleshoot this step by step?",
+    "expected_route": "medium",
+    "customer": "samsung-care",
+    "domain": "device_protection"
+  },
+  {
+    "prompt": "Compare the coverage differences between Samsung Care+ Basic and Care+ with Theft & Loss for my Galaxy Z Flip. I want to understand what I'd gain by upgrading and whether it's worth the cost difference.",
+    "expected_route": "medium",
+    "customer": "samsung-care",
+    "domain": "device_protection"
+  },
+  {
+    "prompt": "I have three Samsung devices enrolled in Care+ — a Galaxy S25, a Galaxy Watch 7, and a Galaxy Tab S10. Summarize the coverage status, remaining claims, and upcoming renewal dates for each device.",
+    "expected_route": "medium",
+    "customer": "samsung-care",
+    "domain": "device_protection"
+  },
+  {
+    "prompt": "Live Translate is giving incorrect translations during phone calls in Korean. It was working fine last week. Walk me through the diagnostic steps to determine if this is a software issue or a hardware problem with the microphone array.",
+    "expected_route": "medium",
+    "customer": "samsung-care",
+    "domain": "device_protection"
+  },
+  {
+    "prompt": "I have a disputed claim on my Galaxy Z Fold 5 where the repair center says the hinge damage was caused by misuse but I believe it's a manufacturing defect. I've had two previous fold-related issues documented under warranty. Review my complete device service history across all three incidents, analyze whether the pattern supports a defect claim, assess my coverage under both the manufacturer's warranty and my Samsung Care+ plan, and draft an escalation request for the claims review team with supporting evidence.",
+    "expected_route": "complex",
+    "customer": "samsung-care",
+    "domain": "device_protection"
+  },
+  {
+    "prompt": "Multiple Galaxy AI features have stopped working simultaneously on my Galaxy S25 Ultra — Circle to Search, Live Translate, and Generative Edit all fail with the same error. This started after I switched carriers. Investigate whether this could be a network-dependent issue, a Galaxy AI licensing problem, or a hardware failure. Cross-reference known issues from the last firmware update and provide a comprehensive diagnostic assessment with recommended next steps for each possible root cause.",
+    "expected_route": "complex",
+    "customer": "samsung-care",
+    "domain": "device_protection"
+  },
+  {
+    "prompt": "I'm a Samsung Care+ claims agent handling an escalation. The customer has five enrolled devices with overlapping coverage periods, has filed 8 claims across three devices in the past year, and is now disputing a denial on their ninth claim. I need a full synthesis of their claim history, a coverage analysis across all active plans, identification of any policy limit issues, and a recommendation for whether to approve, deny, or offer a settlement. Also flag if the claim pattern warrants a fraud review referral.",
+    "expected_route": "complex",
+    "customer": "samsung-care",
+    "domain": "device_protection"
+  },
+  {
+    "prompt": "Perform a comprehensive analysis of the customer's Galaxy ecosystem: three phones, two tablets, and a watch, all enrolled in different Care+ tiers. Two devices have open claims, one has a disputed repair assessment, and the customer wants to consolidate everything under a single family plan. Evaluate each device's current coverage, calculate the cost implications of plan migration, assess whether the open claims would be affected by switching plans mid-cycle, and provide a detailed recommendation.",
+    "expected_route": "complex",
+    "customer": "samsung-care",
+    "domain": "device_protection"
+  }
+]

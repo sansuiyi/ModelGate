@@ -1,0 +1,30 @@
+{
+  "customer_id": "eduassist-tutor",
+  "customer_name": "EduAssist Online",
+  "use_case": "academic_tutoring_platform",
+  "objective": "low_cost",
+  "constraints": {
+    "region": "US-only",
+    "privacy_tier": "high",
+    "forbidden_providers": ["deepseek"],
+    "allowed_providers": ["openai", "anthropic", "google"]
+  },
+  "performance": {
+    "latency_target_ms": 1000,
+    "cost_sensitivity": "high"
+  },
+  "routing_preferences": {
+    "simple": ["gpt-4o-mini", "gemini-2.0-flash"],
+    "medium": ["gpt-4o", "claude-sonnet"],
+    "complex": ["gemini-2.5-pro", "claude-sonnet"]
+  },
+  "warnings": [
+    "FERPA/COPPA compliance required - student PII protected",
+    "China-based providers prohibited",
+    "Tier 1 simple queries MUST use economy models - premium routing is wasteful",
+    "Tier 2 complex queries MUST use reasoning-capable models for accuracy",
+    "Monthly budget $8,000 - intelligent downtiering critical to staying within budget",
+    "Contract requires 60%+ cost savings vs all-premium routing"
+  ],
+  "created_at": "2026-03-21T00:00:00Z"
+}

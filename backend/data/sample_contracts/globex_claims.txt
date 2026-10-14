@@ -1,0 +1,55 @@
+Globex Insurance — Internal AI Platform Agreement
+Contract ID: GX-2026-0891
+Effective Date: February 1, 2026
+
+PARTIES
+This agreement is entered between Assurant, Inc. ("Provider") and Globex Insurance
+("Customer") for the deployment of AI assistance tools supporting claims processing.
+
+SECTION 1 — SERVICE DESCRIPTION
+Provider shall deploy AI-powered analysis tools for Globex Insurance's internal
+claims processing team. The tools will assist claims analysts in reviewing,
+summarizing, and evaluating insurance claims documentation.
+
+SECTION 2 — DATA HANDLING AND PRIVACY
+2.1 All claims data is classified as highly sensitive containing PII and PHI
+(Protected Health Information).
+2.2 Data processing must occur exclusively within US-based data centers.
+2.3 Data must not leave US jurisdiction under any circumstances.
+2.4 All data transmissions must use TLS 1.3 or higher encryption.
+2.5 Conversation logs must be retained for 7 years per regulatory requirements.
+
+SECTION 3 — APPROVED AI PROVIDERS
+3.1 Globex Insurance approves the following AI model providers:
+    - Anthropic (Claude model family)
+    - OpenAI (GPT model family)
+    - Google (Gemini model family)
+3.2 No restrictions on specific providers beyond the approved list in 3.1.
+3.3 Provider may add new providers from the approved list without additional
+    authorization.
+
+SECTION 4 — PERFORMANCE REQUIREMENTS
+4.1 Claims analysis accuracy is the primary performance metric, prioritized
+above response speed.
+4.2 Analysts may wait up to 5 seconds (5000ms) for thorough analytical responses.
+4.3 The system should prioritize reasoning quality and depth for complex
+claims analysis tasks.
+4.4 System uptime SLA: 99.9%
+
+SECTION 5 — COST AND BILLING
+5.1 Globex Insurance operates under a premium SLA tier.
+5.2 Customer is willing to pay for higher-quality model tiers when warranted
+by query complexity and analytical requirements.
+5.3 Monthly AI inference budget: $25,000
+5.4 Cost optimization is secondary to output quality for this engagement.
+
+SECTION 6 — USE CASE SPECIFICATIONS
+6.1 Primary use case: Internal claims analysis assistant
+6.2 User base: 200 claims analysts
+6.3 Expected volume: approximately 2,000 queries per day
+6.4 Estimated query distribution:
+    - Simple queries (policy lookups, status checks): 30%
+    - Medium queries (claim summaries, coverage analysis): 40%
+    - Complex queries (multi-document reasoning, liability assessment): 30%
+6.5 The system must handle multi-document analysis spanning up to 50 pages
+of claims documentation.

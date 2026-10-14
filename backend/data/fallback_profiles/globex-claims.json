@@ -1,0 +1,28 @@
+{
+  "customer_id": "globex-claims",
+  "customer_name": "Globex Claims",
+  "use_case": "internal_claims_analysis",
+  "objective": "high_quality",
+  "constraints": {
+    "region": "US-only",
+    "privacy_tier": "high",
+    "forbidden_providers": [],
+    "allowed_providers": ["anthropic", "openai", "google"]
+  },
+  "performance": {
+    "latency_target_ms": 5000,
+    "cost_sensitivity": "low"
+  },
+  "routing_preferences": {
+    "simple": ["gpt-4o-mini", "claude-haiku"],
+    "medium": ["claude-sonnet", "gpt-4o"],
+    "complex": ["gemini-2.5-pro", "claude-sonnet"]
+  },
+  "warnings": [
+    "Contains PII/PHI - highest privacy tier required",
+    "US-only data processing mandated",
+    "Premium SLA - quality over cost",
+    "7-year data retention requirement"
+  ],
+  "created_at": "2026-03-20T00:00:00Z"
+}

@@ -1,0 +1,55 @@
+ACME Corp AI Services Agreement
+Contract ID: AC-2026-0142
+Effective Date: January 15, 2026
+
+PARTIES
+This agreement is entered between Assurant, Inc. ("Provider") and ACME Corp ("Customer")
+for the deployment of AI-powered customer support services.
+
+SECTION 1 — SERVICE DESCRIPTION
+Provider shall deploy an AI-powered customer support assistant for ACME Corp's
+European customer base. The assistant will handle customer inquiries related to
+product returns, warranty claims, and general product questions.
+
+SECTION 2 — DATA HANDLING AND PRIVACY
+2.1 All customer data must be processed within the European Union in compliance
+with GDPR (General Data Protection Regulation).
+2.2 No customer PII (Personally Identifiable Information) shall be transmitted to
+servers located outside the EU.
+2.3 Data retention shall not exceed 90 days for conversation logs.
+2.4 Customer data shall be encrypted at rest and in transit.
+
+SECTION 3 — APPROVED AI PROVIDERS
+3.1 The Customer approves the use of the following AI model providers:
+    - Anthropic (Claude model family)
+    - OpenAI (GPT model family)
+3.2 The use of DeepSeek, Baidu, or any China-based AI provider is strictly
+prohibited under this agreement.
+3.3 Provider may not route requests to any model provider not explicitly
+listed in Section 3.1 without prior written approval.
+
+SECTION 4 — PERFORMANCE REQUIREMENTS
+4.1 Support responses must be delivered within 1 second (1000ms) for standard
+customer queries.
+4.2 The system should prioritize response speed over reasoning depth for
+routine inquiries (e.g., FAQ responses, order status checks).
+4.3 Complex inquiries requiring detailed analysis may have extended response
+times up to 5 seconds.
+4.4 System uptime SLA: 99.5%
+
+SECTION 5 — COST AND BILLING
+5.1 ACME Corp operates on a cost-sensitive basis for AI services.
+5.2 The service should minimize inference costs while maintaining acceptable
+quality for customer interactions.
+5.3 Monthly AI inference budget cap: $5,000
+5.4 Provider shall optimize model selection to reduce unnecessary premium
+model usage.
+
+SECTION 6 — USE CASE SPECIFICATIONS
+6.1 Primary use case: Automated customer support chatbot
+6.2 Expected volume: approximately 10,000 queries per day
+6.3 Estimated query distribution:
+    - Simple queries (FAQ, status checks): 65%
+    - Medium queries (returns, basic troubleshooting): 30%
+    - Complex queries (escalations, multi-issue resolution): 5%
+6.4 Supported languages: English, French, German

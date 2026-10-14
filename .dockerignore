@@ -1,0 +1,16 @@
+node_modules
+frontend/node_modules
+frontend/.next
+backend/venv
+backend/__pycache__
+backend/**/__pycache__
+backend/data/*.db
+.git
+.env
+*.pyc
+__pycache__
+.claude
+screenshots
+*.png
+*.pdf
+test-results

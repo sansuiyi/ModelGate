@@ -1,0 +1,662 @@
+[
+  {
+    "subject": "elementary_mathematics",
+    "question": "What is the value of p in 24 = 2p?",
+    "choices": [
+      "p = 4",
+      "p = 8",
+      "p = 12",
+      "p = 24"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "elementary_mathematics",
+    "question": "Ms. Perez drove a total of 40 miles in 5 days. She drove the same number of miles each day. How many miles did Ms. Perez drive each day?",
+    "choices": [
+      "5",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "elementary_mathematics",
+    "question": "Find the quotient of \u221240 \u00f7 (\u22128).",
+    "choices": [
+      "1 over 5",
+      "\u22125",
+      "\u22121 over 5",
+      "5"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "elementary_mathematics",
+    "question": "A soccer team has $90.00 to buy soccer balls. If one soccer ball costs $15.60, what is the greatest number of soccer balls the team can buy?",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "elementary_mathematics",
+    "question": "You and three friends go to a concert. The total cost for four tickets is $112. Write and solve an equation to find the cost of one ticket t.",
+    "choices": [
+      "4t = 112; $448",
+      "4t = 112; $28",
+      "t over 4 = 112; $448",
+      "t over 4 = 112; $28"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "elementary_mathematics",
+    "question": "Use the expression below to answer the question. 3 \u00d7 [(2 \u00d7 6 \u2013 5) + (8 \u00f7 4)] \u2013 1 What is the value of the expression?",
+    "choices": [
+      "9",
+      "11",
+      "26",
+      "32"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "elementary_mathematics",
+    "question": "Write 1 and 1 over 11 as a whole or mixed number in simplest form.",
+    "choices": [
+      "1.1 over 11",
+      "11 over 11",
+      "12 over 11",
+      "11 over 12"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "elementary_mathematics",
+    "question": "Find the quotient of 2.16 \u00f7 0.06.",
+    "choices": [
+      "3.6",
+      "36",
+      "0.01272",
+      "12.72"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "elementary_mathematics",
+    "question": "Find the difference of 142.76 \u2013 16.5.",
+    "choices": [
+      "159.26",
+      "2.224",
+      "14,111",
+      "126.26"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "elementary_mathematics",
+    "question": "Find the quotient of 5.04/0.7",
+    "choices": [
+      "0.72",
+      "0.702",
+      "10.0571",
+      "7.2"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\n\"The far-reaching, the boundless future will be the era of American greatness. In its magnificent domain of space and time, the nation of many nations is destined to manifest to mankind the excellence of divine principles; to establish on earth the noblest temple ever dedicated to the worship of the Most High\u2014the Sacred and the True. Its floor shall be a hemisphere\u2014its roof the firmament of the star-studded heavens, and its congregation a Union of many Republics, comprising hundreds of happy millions, calling, owning no man master, but governed by God's natural and moral law of equality, the law of brotherhood\u2014of 'peace and good will amongst men.'\"\nJohn L. O'Sullivan, \"The Great Nation of Futurity,\" 1839\nBy what means did the United States take possession of the Oregon Territory?",
+    "choices": [
+      "The United States was granted the territory in a postwar treaty with France.",
+      "The United States bought it from the Native Americans who lived there.",
+      "U.S. settlers were the first to arrive in the region; they claimed it for their country.",
+      "Great Britain ceded it to the United States as part of a negotiated treaty."
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\nBECAUSE no People can be truly happy, though under the greatest Enjoyment of Civil Liberties, if abridged of the Freedom of their Consciences, as to their Religious Profession and Worship: And Almighty God being the only Lord of Conscience, Father of Lights and Spirits; and the Author as well as Object of all divine Knowledge, Faith and Worship, who only doth enlighten the Minds, and persuade and convince the Understanding of People, I do hereby grant and declare, That no Person or Persons, inhabiting in this Province or Territories, who shall confess and acknowledge One almighty God, the Creator, Upholder and Ruler of the World; and profess him or themselves obliged to live quietly under the Civil Government, shall be in any Case molested or prejudiced, in his or their Person or Estate, because of his or their conscientious Persuasion or Practice, nor be compelled to frequent or maintain any religious Worship, Place or Ministry, contrary to his or their Mind.\u2026\n\u2014William Penn, Charter of Privileges Granted by William Penn,\nesq. to the Inhabitants of Pennsylvania and Territories, October 28, 1701\nBecause of Penn's Charter of Privileges, Pennsylvania became",
+    "choices": [
+      "one of the most religiously diverse colonies in British America.",
+      "one of the least religiously diverse colonies in America.",
+      "notorious for witch hunting and popular superstition.",
+      "known for its hostility to traditional religious practices."
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\n\"We conclude that, in the field of public education, the doctrine of \"separate but equal\" has no place. Separate educational facilities are inherently unequal. Therefore, we hold that the plaintiffs and others similarly situated for whom the actions have been brought are, by reason of the segregation complained of, deprived of the equal protection of the laws guaranteed by the Fourteenth Amendment.\"\nBrown v. Board of Education, 1954\nDesegregation of schools was, in part, a response to unfulfilled promises from which of the following initiatives?",
+    "choices": [
+      "The Great Society",
+      "The Square Deal",
+      "The New Deal",
+      "Reconstruction"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\n\"Since the foundations of the American commonwealth were laid in colonial times over 300 years ago, vigorous complaint and more or less bitter persecution have been aimed at newcomers to our shores. Also the congressional reports of about 1840 are full of abuse of English, Scotch, Welsh immigrants as paupers, criminals, and so forth. Old citizens in Detroit of Irish and German descent have told me of the fierce tirades and propaganda directed against the great waves of Irish and Germans who came over from 1840 on for a few decades to escape civil, racial, and religious persecution in their native lands. The \"Know-Nothings,\" lineal ancestors of the Ku-Klux Klan, bitterly denounced the Irish and Germans as mongrels, scum, foreigners, and a menace to our institutions, much as other great branches of the Caucasian race of glorious history and antecedents are berated to-day\u2026.But to-day it is the Italians, Spanish, Poles, Jews, Greeks, Russians, Balkanians, and so forth, who are the racial lepers\u2026..In this bill we find racial discrimination at its worst\u2014a deliberate attempt to go back 84 years in our census taken every 10 years so that a blow may be aimed at peoples of eastern and southern Europe, particularly at our recent allies in the Great War\u2014Poland and Italy.\"\nRobert H. Clancy, Congressional Record, 68th Congress, 1st Session, 1924\nWhich one of the following legislative acts is most closely an example of nativism?",
+    "choices": [
+      "The Wagner Act of 1935",
+      "The Alien and Sedition Acts of 1798",
+      "The Espionage Act of 1917",
+      "The Immigration and Nationality Act of 1965"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\nNow, we have organized a society, and we call it \"Share Our Wealth Society,\" a society with the motto \"Every Man a King.\"\u2026\nWe propose to limit the wealth of big men in the country. There is an average of $15,000 in wealth to every family in America. That is right here today.\nWe do not propose to divide it up equally. We do not propose a division of wealth, but we do propose to limit poverty that we will allow to be inflicted on any man's family. We will not say we are going to try to guarantee any equality \u2026 but we do say that one third of the average is low enough for any one family to hold, that there should be a guarantee of a family wealth of around $5,000; enough for a home, an automobile, a radio, and the ordinary conveniences, and the opportunity to educate their children.\u2026\nWe will have to limit fortunes. Our present plan is that we will allow no man to own more than $50,000,000. We think that with that limit we will be able to carry out the balance of the program.\n\u2014Senator Huey P. Long of Louisiana, Radio Address, February 23, 1934\nPresident Franklin D. Roosevelt responded to political challenges like that of Senator Long by doing which of the following?",
+    "choices": [
+      "Announcing that he would not run for re-election",
+      "Launching the Second New Deal, a series of legislative acts including Social Security",
+      "Diverting people's attention by allowing the Japanese to bomb Pearl Harbor",
+      "Urging Congress to cut taxes and deregulate the economy"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\n\"I was once a tool of oppression\nAnd as green as a sucker could be\nAnd monopolies banded together\nTo beat a poor hayseed like me.\n\"The railroads and old party bosses\nTogether did sweetly agree;\nAnd they thought there would be little trouble\nIn working a hayseed like me. . . .\"\n\u2014\"The Hayseed\"\nThe song, and the movement that it was connected to, highlight which of the following developments in the broader society in the late 1800s?",
+    "choices": [
+      "Corruption in government\u2014especially as it related to big business\u2014energized the public to demand increased popular control and reform of local, state, and national governments.",
+      "A large-scale movement of struggling African American and white farmers, as well as urban factory workers, was able to exert a great deal of leverage over federal legislation.",
+      "The two-party system of the era broke down and led to the emergence of an additional major party that was able to win control of Congress within ten years of its founding.",
+      "Continued skirmishes on the frontier in the 1890s with American Indians created a sense of fear and bitterness among western farmers."
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\n\"Some men look at constitutions with sanctimonious reverence, and deem them like the ark of the covenant, too sacred to be touched. They ascribe to the men of the preceding age a wisdom more than human, and suppose what they did to be beyond amendment\u2026.But I know also, that laws and institutions must go hand in hand with the progress of the human mind. As that becomes more developed, more enlightened, as new discoveries are made, new truths disclosed, and manners and opinions change with the change of circumstances, institutions must advance also, and keep pace with the times.\"\nThomas Jefferson, 1816\nWhich of the following statements is most accurate regarding the existence of political parties in the early United States?",
+    "choices": [
+      "After the drafting of the Constitution, continued debates about states' rights and competing economic interests led to the formation of political parties, such as the Federalists and the Democratic-Republicans.",
+      "Although Washington warned against the influence of political parties, he reluctantly accepted the endorsement of the Federalist party.",
+      "Political parties did not exist until the War of 1812, when Federalists asserted control over foreign policies with France and Britain.",
+      "Two major political parties dominated early presidential elections until John Quincy Adams founded the Whig party in 1824."
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\nAt a meeting of working girls held at Hull House during a strike in a large shoe factory, the discussions made it clear that the strikers who had been most easily frightened, and therefore the first to capitulate, were naturally those girls who were paying board and were afraid of being put out if they fell too far behind. After a recital of a case of peculiar hardship one of them exclaimed: \"Wouldn't it be fine if we had a boarding club of our own, and then we could stand behind each other in a time like this?\" After that events moved quickly. We \u2026 discussed all the difficulties and fascinations of such an undertaking, and on the first of May, 1891, two comfortable apartments near Hull House were rented and furnished. The Settlement was responsible for the furniture and paid the first month's rent, but beyond that the members managed the club themselves.\u2026 At the end of the third year the club occupied all of the six apartments which the original building contained, and numbered fifty members.\n\u2014Jane Addams, Twenty Years at Hull House, 1912\nA settlement house worker was most likely to be motivated by which of the following?",
+    "choices": [
+      "The Social Gospel",
+      "Social Darwinism",
+      "Communism",
+      "The support of an urban political machine"
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\n\"Lincoln was strongly anti-slavery, but he was not an abolitionist or a Radical Republican and never claimed to be one. He made a sharp distinction between his frequently reiterated personal wish that 'all men everywhere could be free' and his official duties as a legislator, congressman, and president in a legal and constitutional system that recognized the South's right to property in slaves. Even after issuing the Emancipation Proclamation he continued to declare his preference for gradual abolition. While his racial views changed during the Civil War, he never became a principled egalitarian in the manner of abolitionists such as Frederick Douglass or Wendell Phillips or Radical Republicans like Charles Sumner.\"\n\u2014Eric Foner, The Fiery Trial, 2010\nHow did President Lincoln's issuance of the Emancipation Proclamation alter the course of the Civil War?",
+    "choices": [
+      "The war came to a swift conclusion because the Proclamation made the Confederacy realize the futility of their cause.",
+      "The war grew in scope because the Proclamation caused Great Britain to join the fight on the side of the Union.",
+      "President Jefferson Davis of the Confederacy vowed massive resistance to any Union effort to free the slaves.",
+      "The war aims of the United States were no longer exclusively focused on the preservation of the Union."
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "high_school_us_history",
+    "question": "This question refers to the following information.\n\"Yesterday, December 7, 1941\u2014a date which will live in infamy\u2014the United States of America was suddenly and deliberately attacked by naval and air forces of the Empire of Japan. The United States was at peace with that nation and, at the solicitation of Japan, was still in conversation with its Government and its Emperor looking toward the maintenance of peace in the Pacific. Indeed, one hour after Japanese air squadrons had commenced bombing\u2026the Japanese Ambassador to the United States and his colleague delivered to the Secretary of State a formal reply to a recent American message. While this reply stated that it seemed useless to continue the existing diplomatic negotiations, it contained no threat or hint of war or armed attack\u2026.The attack yesterday\u2026has caused severe damage to American naval and military forces. Very many American lives have been lost. In addition American ships have been reported torpedoed on the high seas\u2026.As Commander-in-Chief of the Army and Navy, I have directed that all measures be taken for our defense.\"\nPresident Franklin D. Roosevelt, radio address, December 8, 1941\nWhich of the following statements best characterizes the economic consequences of the declaration of war described above?",
+    "choices": [
+      "Decreased trade with Asian nations precipitated economic recession in both the United States and Europe.",
+      "The war-ravaged condition of Asia and Europe allowed the United States to emerge as one of the most prosperous nations on Earth.",
+      "Cold War tensions isolated the economies of both the Soviet Union and the United States, leading to economic struggle for both nations.",
+      "Japan was subsequently required to pay reparations to the United States, forcing it into a prolonged depression."
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "high_school_computer_science",
+    "question": "Let x = 1. What is x << 3 in Python 3?",
+    "choices": [
+      "1",
+      "3",
+      "8",
+      "16"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "high_school_computer_science",
+    "question": "In Python 3, which of the following function convert a string to an int in python?",
+    "choices": [
+      "int(x [,base])",
+      "long(x [,base] )",
+      "float(x)",
+      "str(x)"
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "high_school_computer_science",
+    "question": "A user enters a Web address in a browser, and a request for a file is sent to a Web server. Which of the following best describes how the file is sent to the user?",
+    "choices": [
+      "The file is broken into packets for transmission. The packets must be reassembled upon receipt.",
+      "The file is broken into packets for transmission. The user's browser must request each packet in order until all packets are received.",
+      "The server attempts to connect directly to the user's computer. If the connection is successful, the entire file is sent. If the connection is unsuccessful, an error message is sent to the user.",
+      "The server repeatedly attempts to connect directly to the user's computer until a connection is made. Once the connection is made, the entire file is sent."
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "high_school_computer_science",
+    "question": "Digital images are often represented by the red, green, and blue values (an RGB triplet) of each individual pixel in the image. A photographer is manipulating a digital image and overwriting the original image. Which of the following describes a lossless transformation of the digital image?",
+    "choices": [
+      "Compressing the image in a way that may lose information but will suffer only a small loss of image quality.",
+      "Creating the gray scale of an image by averaging the amounts of red, green, and blue in each pixel and assigning this new value to the corresponding pixel in the new image. The new value of each pixel represents a shade of gray, ranging from white to black.",
+      "Creating the negative of an image by creating a new RGB triplet for each pixel in which each value is calculated by subtracting the original value from 255. The negative of an image is reversed from the original; light areas appear dark, and colors are reversed.",
+      "Modifying part of the image by taking the pixels in one part of the picture and copying them to the pixels in another part of the picture."
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "high_school_computer_science",
+    "question": "A programmer is writing a program that is intended to be able to process large amounts of data. Which of the following considerations is LEAST likely to affect the ability of the program to process larger data sets?",
+    "choices": [
+      "How long the program takes to run",
+      "How many programming statements the program contains",
+      "How much memory the program requires as it runs",
+      "How much storage space the program requires as it runs"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "high_school_computer_science",
+    "question": "Suppose the characters 0,1, . . . ,8,9,A,B,C,D, E,F are used to represent a hexadecimal (base-16) number. Here A = 10, B = 11, . . . ,F = 15. What is the largest base-10 integer that can be represented with a two-digit hexadecimal number, such as 14 or 3A?",
+    "choices": [
+      "32",
+      "225",
+      "255",
+      "256"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "high_school_computer_science",
+    "question": "A large data set contains information about all students majoring in computer science in colleges across the United States. The data set contains the following information about each student.\n   \u00b0 The student's gender\n   \u00b0 The state in which the student attends college\n   \u00b0 The student's grade point average on a 4.0 scale\n\n Which of the following questions could be answered by analyzing only information in the data set?",
+    "choices": [
+      "Do students majoring in computer science tend to have higher grade point averages than students majoring in other subjects?",
+      "How many states have a higher percentage of female computer science majors than male computer science majors attending college in that state?",
+      "What percent of students attending college in a certain state are majoring in computer science?",
+      "Which college has the highest number of students majoring in computer science?"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "high_school_computer_science",
+    "question": "The code segment below uses the procedure IsFound (list, item), which returns true if item appears in list and returns false otherwise. The list resultList is initially empty.\n  FOR EACH item IN inputList1{\n IF (isFound (inputList2, item) )\n APPEND (resultList, item)\n }\n Which of the following best describes the contents of resultList after the code segment is executed?",
+    "choices": [
+      "All elements in inputListl followed by all elements in inputList2",
+      "Only elements that appear in both inputListl and inputList2",
+      "Only elements that appear in either inputListl or inputList2 but not in both lists",
+      "Only elements that appear in inputListl but not in inputList2"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "high_school_computer_science",
+    "question": "A program is expressed in a programming language. Which of the following is true of the program?",
+    "choices": [
+      "The program can also be expressed as binary code, but will be more easily understood by humans when expressed in a higher-level programming language.",
+      "The program can also be expressed as binary code, which will reduce the likelihood of errors.",
+      "The program cannot be expressed as binary code, because binary code can only be used to represent data.",
+      "Some parts of the program can be expressed as binary code, but operations must be expressed using a higher-level programming language."
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "high_school_computer_science",
+    "question": "In Python 3, what is the output of print tuple[0] if tuple = ( 'abcd', 786 , 2.23, 'john', 70.2 )?",
+    "choices": [
+      "( 'abcd', 786 , 2.23, 'john', 70.2 )",
+      "abcd",
+      "Error",
+      "None of the above."
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "college_biology",
+    "question": "Based on the characteristic population curves that result from plotting population growth of a species, the most effective means of controlling the mosquito population is to",
+    "choices": [
+      "maintain the population at a point corresponding to the midpoint of its logistic curve",
+      "opt for zero population control once the K value of the curve has been reached",
+      "reduce the carrying capacity cif the environment to lower the K value",
+      "increase the mortality rate"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "college_biology",
+    "question": "A frameshift mutation is created when",
+    "choices": [
+      "telomeric sequences are removed from DNA",
+      "a codon's nucleotide sequence changes so that it calls for production of a different amino acid than the original one",
+      "a base pair is either inserted or deleted in a gene",
+      "a codon's nucleotide sequence is changed so that instead of coding for a given amino acid it acts to terminate translation"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "college_biology",
+    "question": "To prevent desiccation and injury, the embryos of terrestrial vertebrates are encased within a fluid secreted by the",
+    "choices": [
+      "amnion",
+      "chorion",
+      "allantois",
+      "yolk sac"
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "college_biology",
+    "question": "Which of the following is a second messenger that stimulates release of calcium ions into the cytoplasm?",
+    "choices": [
+      "Prostaglandins",
+      "Inositol triphosphate",
+      "Cyclic AMP",
+      "Calmodulin"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "college_biology",
+    "question": "Synthesis of an RNA/DNA hybrid from a single-stranded RNA template requires",
+    "choices": [
+      "a DNA or RNA primer and reverse transcriptase",
+      "a DNA or RNA primer and DNA polymerase",
+      "RNase only",
+      "reverse transcriptase only"
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "college_biology",
+    "question": "In order for the Hardy-Weinberg law to operate with respect to a population of organisms, each of the following conditions must be met EXCEPT:",
+    "choices": [
+      "Genes are exchanged with other populations.",
+      "Population size is large.",
+      "Natural selection does not take place.",
+      "Matings are random."
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "college_biology",
+    "question": "The Barr body found within female mammalian cells' nuclei is an example of",
+    "choices": [
+      "euchromatin",
+      "heterochromatin",
+      "a cistron",
+      "pseudogenes"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "college_biology",
+    "question": "Which of the following is NOT a source of atmospheric carbon?",
+    "choices": [
+      "Respiration",
+      "Photosynthesis",
+      "Bacterial decomposition",
+      "Combustion of fossil fuels"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "college_biology",
+    "question": "The concept of punctuated equilibrium refers to",
+    "choices": [
+      "oscillating ecological successional stages",
+      "ecological succession arrested by sudden environmental changes, e.g., fire",
+      "persistent predator-prey relationships in relatively stable environments",
+      "bursts of speciation followed by relatively unchanging lineages"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "college_biology",
+    "question": "When an influenza virus enters a cell, it immediately starts to do which of the following?",
+    "choices": [
+      "Incorporate viral DNA into the host cell\u2019s chromosome",
+      "Destroy the host cell\u2019s transcriptional machinery",
+      "Replicate its genetic material and synthesize viral proteins",
+      "Use a viral copy of reverse transcriptase to manufacture viral DNA"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "abstract_algebra",
+    "question": "Find the degree for the given field extension Q(sqrt(2), sqrt(3), sqrt(18)) over Q.",
+    "choices": [
+      "0",
+      "4",
+      "2",
+      "6"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "abstract_algebra",
+    "question": "Let p = (1, 2, 5, 4)(2, 3) in S_5 . Find the index of <p> in S_5.",
+    "choices": [
+      "8",
+      "2",
+      "24",
+      "120"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "abstract_algebra",
+    "question": "Find all zeros in the indicated finite field of the given polynomial with coefficients in that field. x^5 + 3x^3 + x^2 + 2x in Z_5",
+    "choices": [
+      "0",
+      "1",
+      "0,1",
+      "0,4"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "abstract_algebra",
+    "question": "Statement 1 | A factor group of a non-Abelian group is non-Abelian. Statement 2 | If K is a normal subgroup of H and H is a normal subgroup of G, then K is a normal subgroup of G.",
+    "choices": [
+      "True, True",
+      "False, False",
+      "True, False",
+      "False, True"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "abstract_algebra",
+    "question": "Find the product of the given polynomials in the given polynomial ring. f(x) = 4x - 5, g(x) = 2x^2 - 4x + 2 in Z_8[x].",
+    "choices": [
+      "2x^2 + 5",
+      "6x^2 + 4x + 6",
+      "0",
+      "x^2 + 1"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "abstract_algebra",
+    "question": "Statement 1 | If a group has an element of order 15 it must have at least 8 elements of order 15. Statement 2 | If a group has more than 8 elements of order 15, it must have at least 16 elements of order 15.",
+    "choices": [
+      "True, True",
+      "False, False",
+      "True, False",
+      "False, True"
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "abstract_algebra",
+    "question": "Statement 1 | Every homomorphic image of a group G is isomorphic to a factor group of G. Statement 2 | The homomorphic images of a group G are the same (up to isomorphism) as the factor groups of G.",
+    "choices": [
+      "True, True",
+      "False, False",
+      "True, False",
+      "False, True"
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "abstract_algebra",
+    "question": "Statement 1 | A ring homomorphism is one to one if and only if the kernel is {0}. Statement 2 | Q is an ideal in R.",
+    "choices": [
+      "True, True",
+      "False, False",
+      "True, False",
+      "False, True"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "abstract_algebra",
+    "question": "Find the degree for the given field extension Q(sqrt(2) + sqrt(3)) over Q.",
+    "choices": [
+      "0",
+      "4",
+      "2",
+      "6"
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "abstract_algebra",
+    "question": "Find all zeros in the indicated finite field of the given polynomial with coefficients in that field. x^3 + 2x + 2 in Z_7",
+    "choices": [
+      "1",
+      "2",
+      "2,3",
+      "6"
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "formal_logic",
+    "question": "Identify the conclusion of the following argument. It is hard not to verify in our peers the same weakened intelligence due to emotions that we observe in our everyday patients. The arrogance of our consciousness, which in general, belongs to the strongest defense mechanisms, blocks the unconscious complexes. Because of this, it is difficult to convince people of the unconscious, and in turn to teach them what their conscious knowledge contradicts. (Sigmund Freud, The Origin and Development of Psychoanalysis)",
+    "choices": [
+      "It is hard not to verify in our peers the same weakened intelligence due to emotions that we observe in our everyday patients.",
+      "The arrogance of our consciousness, which in general, belongs to the strongest defense mechanisms, blocks the unconscious complexes.",
+      "Because of this, it is difficult to convince people of the unconscious, and in turn to teach them what their conscious knowledge contradicts.",
+      "It is difficult to convince people of the unconscious, and in turn to teach them what their conscious knowledge contradicts."
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "formal_logic",
+    "question": "Select the best translation into predicate logic. David teaches Chris. (c: Chris; d: David; Txy: x teaches y)",
+    "choices": [
+      "Tdc",
+      "Tcd",
+      "Tcc",
+      "dTc"
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "formal_logic",
+    "question": " Select the best English interpretation of the given proposition, using the following translation key: Ax: x is an apartment Hx: x is a house Lx: x is large Bxy: x is bigger than y (\u2203x)[(Ax \u2022 Lx) \u2022 (\u2203y)(Hy \u2022 Bxy)]",
+    "choices": [
+      "Some large houses are bigger than some apartments.",
+      "Some houses are bigger than all large apartments.",
+      "Some large apartments are bigger than some houses.",
+      "Some houses are bigger thatn some large apartments."
+    ],
+    "answer": 2
+  },
+  {
+    "subject": "formal_logic",
+    "question": "Construct a complete truth table for the following argument. Then, using the truth table, determine whether the argument is valid or invalid. If the argument is invalid, choose an option which presents a counterexample. (There may be other counterexamples as well.)\n~G \u2283 H\n~H / G",
+    "choices": [
+      "Valid",
+      "Invalid. Counterexample when G and H are true",
+      "Invalid. Counterexample when G is true and H is false",
+      "Invalid. Counterexample when H is true and G is false"
+    ],
+    "answer": 0
+  },
+  {
+    "subject": "formal_logic",
+    "question": " Use the following key to translate the given formula of PL to natural, English sentences.\nA: Marina reads a Percy Jackson book.\nB: Izzy plays Minecraft.\nC: Emily stops working.\nD: Russell makes dinner.\nE: Ashleigh stops by.\n(~B \u2022 E) \u2283 D",
+    "choices": [
+      "If it's not the case that both Izzy plays Minecraft and Ashleigh stops by then Russell makes dinner.",
+      "If it's both not the case that Izzy plays Minecraft and Ashleigh stops by then Russell makes dinner.",
+      "Izzy playing Minecraft and Ashleigh stopping by entails that Russell makes dinner.",
+      "Russell's making dinner is a sufficient condition for Izzy not playing Minecraft and Ashleigh stopping by."
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "formal_logic",
+    "question": " Select the best English interpretation of the given proposition, using the following translation key: Ax: x is an apartment Hx: x is a house Lx: x is large Bxy: x is bigger than y (\u2203x)[Hx \u2022 (\u2200y)(Ay \u2283 Bxy)]",
+    "choices": [
+      "Some houses are smaller than all apartments.",
+      "Every house is bigger than every apartment.",
+      "Some apartment is smaller than every house.",
+      "Some houses are bigger than every apartment."
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "formal_logic",
+    "question": "Construct a complete truth table for the following argument. Then, using the truth table, determine whether the argument is valid or invalid. If the argument is invalid, choose an option which presents a counterexample. (There may be other counterexamples as well.)\n~K \u2261 L / (K \u00b7 L) \u2228 (K \u00b7 ~L)",
+    "choices": [
+      "Valid",
+      "Invalid. Counterexample when K and L are true",
+      "Invalid. Counterexample when K is true and L is false",
+      "Invalid. Counterexample when L is true and K is false"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "formal_logic",
+    "question": "Identify the antecedent of the following conditional proposition: If the university does not increase financial aid, either the president fails to approve it or the board of trustees prevents it.",
+    "choices": [
+      "The university increases financial aid.",
+      "The university does not increase financial aid.",
+      "The board of trustees prevents it.",
+      "The president fails to approve it."
+    ],
+    "answer": 1
+  },
+  {
+    "subject": "formal_logic",
+    "question": " Which of the following propositions is an immediate (one-step) consequence in PL of the given premises?\n~E \u2283 ~F\nG \u2283 F\nH \u2228 ~E\nH \u2283 I\n~I",
+    "choices": [
+      "E \u2283 F",
+      "F \u2283 G",
+      "H \u2283 ~E",
+      "~H"
+    ],
+    "answer": 3
+  },
+  {
+    "subject": "formal_logic",
+    "question": " Which of the given formulas of PL is the best symbolization of the following sentence?\nEverybody loves Raymond, or not.",
+    "choices": [
+      "L",
+      "~L",
+      "L \u2022 ~L",
+      "L \u2228 ~L"
+    ],
+    "answer": 3
+  }
+]

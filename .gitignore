@@ -1,0 +1,66 @@
+# Environment
+.env
+*.env.local
+
+# Da models
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# More cache
+*.cache
+*/.cache/*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+venv/
+backend/venv/
+.venv/
+
+# Java build
+backend/target/
+
+# Node
+node_modules/
+frontend/.next/
+frontend/out/
+frontend/.vercel/
+
+# Database
+backend/data/controlplane.db
+backend/data/contracts/*
+!backend/data/contracts/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Transcripts / personal notes (not for submission)
+Mar 19 at 6-30 PM.transcript.txt
+Day 1 organizer presentations.md
+
+# Model cache
+*.bin
+*.safetensors
+
+# Misc
+*.log
+.pytest_cache/
+screenshots/
+unsloth_compiled_cache/
+frontend/.playwright-tmp/

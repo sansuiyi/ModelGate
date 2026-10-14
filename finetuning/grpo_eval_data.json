@@ -1,0 +1,67 @@
+[
+  {"prompt": "What's your email address?", "expected_route": "simple", "domain": "customer_support"},
+  {"prompt": "Do you accept returns after 30 days?", "expected_route": "simple", "domain": "customer_support"},
+  {"prompt": "How much is express shipping?", "expected_route": "simple", "domain": "customer_support"},
+  {"prompt": "Can I pay with PayPal?", "expected_route": "simple", "domain": "customer_support"},
+  {"prompt": "Is order #99102 still processing?", "expected_route": "simple", "domain": "customer_support"},
+  {"prompt": "Do you have a loyalty program?", "expected_route": "simple", "domain": "customer_support"},
+  {"prompt": "What's the minimum order amount for free delivery?", "expected_route": "simple", "domain": "customer_support"},
+  {"prompt": "Can I pick up my order in store?", "expected_route": "simple", "domain": "customer_support"},
+  {"prompt": "Are you open on weekends?", "expected_route": "simple", "domain": "customer_support"},
+  {"prompt": "What's the tracking number for my package?", "expected_route": "simple", "domain": "customer_support"},
+
+  {"prompt": "I ordered a medium shirt but received a large. I also noticed a small stain on the collar. Can you help me figure out whether to exchange or return, and whether the stain qualifies for a separate damage claim?", "expected_route": "medium", "domain": "customer_support"},
+  {"prompt": "My annual membership is coming up for renewal next month. Can you compare what I'm currently paying versus the new pricing tiers and advise whether I should switch plans or stay on my current one?", "expected_route": "medium", "domain": "customer_support"},
+  {"prompt": "I placed two orders last week — one arrived with missing items and the other hasn't shipped yet. Can you look into both and tell me what my options are for each?", "expected_route": "medium", "domain": "customer_support"},
+  {"prompt": "The product I bought last month keeps overheating during normal use. I've already tried the basic troubleshooting steps on your website. Can you help me determine if this is a defect and what my next steps should be?", "expected_route": "medium", "domain": "customer_support"},
+
+  {"prompt": "I've had recurring quality issues with five different orders over the past six months, each involving products from different categories. I need you to pull my complete order and complaint history, identify whether there's a pattern tied to specific suppliers or warehouses, calculate the total value of defective goods I've received, and recommend whether I should be offered a blanket credit, individual replacements, or an account-level service recovery package.", "expected_route": "complex", "domain": "customer_support"},
+  {"prompt": "Our company is considering switching our entire procurement from your platform to a competitor. Before we decide, I need a comprehensive analysis of our 3-year purchase history, volume discount utilization rate, return rate by category, average fulfillment time versus SLA, and a total cost comparison factoring in the switching costs and the competitor's published rates.", "expected_route": "complex", "domain": "customer_support"},
+
+  {"prompt": "What's the effective date on policy #2210?", "expected_route": "simple", "domain": "insurance_claims"},
+  {"prompt": "Has claim #8877 been assigned to an adjuster yet?", "expected_route": "simple", "domain": "insurance_claims"},
+  {"prompt": "What's the per-incident limit on plan type D?", "expected_route": "simple", "domain": "insurance_claims"},
+  {"prompt": "How many claims were filed in Q2?", "expected_route": "simple", "domain": "insurance_claims"},
+  {"prompt": "Is policy #3340 still in force?", "expected_route": "simple", "domain": "insurance_claims"},
+  {"prompt": "What's the total payout on claim #1155 so far?", "expected_route": "simple", "domain": "insurance_claims"},
+  {"prompt": "Who handles property claims in the Midwest region?", "expected_route": "simple", "domain": "insurance_claims"},
+  {"prompt": "When is the next renewal date for account #4488?", "expected_route": "simple", "domain": "insurance_claims"},
+  {"prompt": "What documentation is needed to file a windstorm claim?", "expected_route": "simple", "domain": "insurance_claims"},
+  {"prompt": "Show me the loss run for policy #5567.", "expected_route": "simple", "domain": "insurance_claims"},
+
+  {"prompt": "The claimant on case #4410 submitted two conflicting repair estimates from different body shops. Compare the line items, identify the discrepancies, and recommend which estimate better aligns with our standard pricing guidelines.", "expected_route": "medium", "domain": "insurance_claims"},
+  {"prompt": "Pull the payment history for claim #7703 and explain why there's a gap between the initial reserve and the amount actually disbursed. I need to understand if the shortfall is due to depreciation, deductible application, or a coverage exclusion.", "expected_route": "medium", "domain": "insurance_claims"},
+  {"prompt": "Summarize the independent medical examination report for claim #9920 and assess whether the findings support or contradict the treating physician's disability rating.", "expected_route": "medium", "domain": "insurance_claims"},
+  {"prompt": "We received a demand letter on claim #6632 requesting three times our current reserve. Break down the demand by category and assess whether any of the claimed amounts are reasonable based on comparable settlements in this jurisdiction.", "expected_route": "medium", "domain": "insurance_claims"},
+
+  {"prompt": "Our commercial property portfolio has 14 open claims from last month's tornado outbreak across three states. I need a consolidated exposure analysis that groups claims by peril type and state, maps each claim against policy sublimits and aggregate caps, identifies any coordination-of-benefits issues with the policyholders' excess carriers, projects total ultimate incurred using chain-ladder development factors, and flags any claims where our current reserves deviate more than 20% from the actuarial indication.", "expected_route": "complex", "domain": "insurance_claims"},
+  {"prompt": "A class action has been filed against one of our commercial auto policyholders alleging systemic negligent hiring practices after three separate at-fault accidents in six months. Analyze the policy's coverage grants and exclusions, assess the applicability of the employment practices liability endorsement, review the fleet's complete loss history for pattern evidence, evaluate our exposure under both the primary and umbrella layers, and recommend a coordinated defense strategy with estimated legal costs under three different scenarios.", "expected_route": "complex", "domain": "insurance_claims"},
+
+  {"prompt": "How do I pair my Galaxy Buds with my phone?", "expected_route": "simple", "domain": "device_protection"},
+  {"prompt": "What's the repair turnaround time for a cracked tablet screen?", "expected_route": "simple", "domain": "device_protection"},
+  {"prompt": "Is accidental damage covered on my basic plan?", "expected_route": "simple", "domain": "device_protection"},
+  {"prompt": "Can I file a claim online or do I need to call?", "expected_route": "simple", "domain": "device_protection"},
+  {"prompt": "What's the maximum number of claims I can file per year?", "expected_route": "simple", "domain": "device_protection"},
+  {"prompt": "Does my plan cover a lost stylus?", "expected_route": "simple", "domain": "device_protection"},
+  {"prompt": "How do I check my remaining coverage balance?", "expected_route": "simple", "domain": "device_protection"},
+  {"prompt": "Is there a deductible for battery replacement?", "expected_route": "simple", "domain": "device_protection"},
+
+  {"prompt": "My tablet's display has a green tint that only appears when the brightness is below 30%. It started after I installed a system update two weeks ago. Help me determine whether this is a software rendering bug or an OLED panel defect, and what my claim options are under each scenario.", "expected_route": "medium", "domain": "device_protection"},
+  {"prompt": "I have two devices on the same plan — a phone and a smartwatch. The phone needs a screen repair and the watch band clasp broke. Walk me through how to file both claims efficiently and whether the deductibles are applied separately or combined.", "expected_route": "medium", "domain": "device_protection"},
+  {"prompt": "My phone's facial recognition stopped working after a screen replacement at an authorized repair center. The repair center says the phone is fine. Help me figure out if the repair caused the issue and whether I can file a new claim for the biometric failure.", "expected_route": "medium", "domain": "device_protection"},
+  {"prompt": "Compare the total cost of keeping my current device and extending the protection plan for another year versus trading it in and buying the new model with a fresh plan. Factor in the trade-in value and the deductible I'd save by not renewing.", "expected_route": "medium", "domain": "device_protection"},
+
+  {"prompt": "I manage device protection for a school district with 2,000 student Chromebooks and 300 teacher laptops across 15 buildings. We've seen a spike in damage claims this semester and I need a full analysis: break down claim frequency by building and device type, identify whether certain models have disproportionate failure rates, compare our per-device claim cost against the district's protection plan premium, evaluate whether switching to a higher-deductible plan would reduce our total spend, and produce a recommendation for next year's budget cycle.", "expected_route": "complex", "domain": "device_protection"},
+  {"prompt": "A customer's phone caught fire while charging overnight, causing minor property damage to their nightstand. They're claiming under both their device protection plan and their renter's insurance. I need to coordinate the two claims, determine which policy is primary, assess product liability exposure against the device manufacturer and the third-party charger maker, evaluate subrogation potential, and produce a unified resolution strategy that addresses the device replacement, the property damage, and the liability question.", "expected_route": "complex", "domain": "device_protection"},
+
+  {"prompt": "Hi there.", "expected_route": "simple", "domain": "general"},
+  {"prompt": "Sure, go ahead.", "expected_route": "simple", "domain": "general"},
+  {"prompt": "What does SLA stand for?", "expected_route": "simple", "domain": "general"},
+  {"prompt": "Can you say that again?", "expected_route": "simple", "domain": "general"},
+  {"prompt": "Never mind, I figured it out.", "expected_route": "simple", "domain": "general"},
+
+  {"prompt": "I received a notification about a policy change but I don't understand the new terms. Can you break down the key differences between the old and new policy language and explain how each change affects my coverage in practical terms?", "expected_route": "medium", "domain": "general"},
+  {"prompt": "I'm trying to decide between three different service packages your company offers. Can you lay out the features, limitations, and total annual cost of each, and recommend which one fits best for a mid-size business with about 200 employees?", "expected_route": "medium", "domain": "general"},
+
+  {"prompt": "Our organization is undergoing a digital transformation and we need to evaluate whether to consolidate all of our service contracts under a single vendor or maintain the current multi-vendor approach. Analyze the total cost of ownership for both scenarios over a 5-year horizon, factor in migration risks, vendor lock-in implications, SLA differences across providers, and the impact on our internal support team's workload. Include a risk-adjusted recommendation with sensitivity analysis on the three most uncertain cost variables.", "expected_route": "complex", "domain": "general"}
+]
