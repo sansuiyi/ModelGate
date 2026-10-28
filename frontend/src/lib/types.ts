@@ -16,6 +16,21 @@ export interface ProfileWarning {
   message: string;
 }
 
+export interface ExtractionMetrics {
+  mode?: string;
+  llm_calls?: number;
+  iterations?: number;
+  prompt_tokens?: number;
+  completion_tokens?: number;
+  total_tokens?: number;
+  estimated_cost_usd?: number | null;
+  elapsed_ms?: number;
+  fallback_from?: string;
+  fallback_reason?: string;
+  finalized_by?: string;
+  budget_hit?: string;
+}
+
 export interface CustomerProfile {
   customer_id: string;
   customer_name: string;
@@ -25,6 +40,7 @@ export interface CustomerProfile {
   performance: CustomerPerformance;
   routing_preferences: Record<string, string[]>;
   warnings: (string | ProfileWarning)[];
+  extraction?: ExtractionMetrics;
   created_at: string;
 }
 

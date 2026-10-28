@@ -2,7 +2,7 @@
 
 import { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { getCustomers, getModels, sendPrompt } from "@/lib/api";
+import { getCustomers, getModels, sendPlaygroundPrompt } from "@/lib/api";
 import type { CustomerProfile, ModelConfig } from "@/lib/types";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -67,7 +67,7 @@ function PlaygroundContent() {
     if (!selectedCustomer || !prompt.trim()) return;
     setLoading(true);
     try {
-      const result = await sendPrompt(selectedCustomer, prompt);
+      const result = await sendPlaygroundPrompt(selectedCustomer, prompt);
       setHistory((prev) => [{ prompt, response: result.response, routing: result.routing, timestamp: new Date().toLocaleTimeString() }, ...prev]);
       setPrompt("");
     } catch (err) {
@@ -185,6 +185,8 @@ function PlaygroundContent() {
           ) : (
             history.map((entry, i) => {
               const actualModel = entry.routing.model || entry.routing.selected_model || "unknown";
+              const contractModel = entry.routing.contract_selected_model || actualModel;
+              const replyModel = entry.routing.reply_model || actualModel;
               const actualModelInfo = allModels.find(m => m.model_name === actualModel);
               const actualCost = Number(entry.routing.cost || 0);
               const inputTokens = Number(entry.routing.input_tokens || 0);
@@ -213,8 +215,8 @@ function PlaygroundContent() {
                           : entry.routing.classification === "complex" ? "border-red-500/30 text-red-400"
                           : "border-amber-500/30 text-amber-400"
                         }`}>{TIER_LABELS[entry.routing.classification] || entry.routing.classification}</Badge>
-                        <Badge variant="outline" className="text-[9px] border-primary/30 text-primary">{actualModel}</Badge>
-                        {entry.routing.selected_provider && <Badge variant="outline" className="text-[9px]">{entry.routing.selected_provider}</Badge>}
+                        <Badge variant="outline" className="text-[9px] border-primary/30 text-primary">{contractModel}</Badge>
+                        {entry.routing.contract_selected_provider && <Badge variant="outline" className="text-[9px]">{entry.routing.contract_selected_provider}</Badge>}
                       </div>
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                         {[
@@ -251,11 +253,11 @@ function PlaygroundContent() {
                         <div className="space-y-1">
                           <div className="flex items-center justify-between">
                             <span className="text-[10px] text-muted-foreground">模型</span>
-                            <span className="text-[10px] font-mono text-green-400">{actualModel}</span>
+                            <span className="text-[10px] font-mono text-green-400">{contractModel}</span>
                           </div>
                           <div className="flex items-center justify-between">
                             <span className="text-[10px] text-muted-foreground">提供商</span>
-                            <span className="text-[10px] font-mono">{entry.routing.selected_provider || actualModelInfo?.provider || "?"}</span>
+                            <span className="text-[10px] font-mono">{entry.routing.contract_selected_provider || entry.routing.selected_provider || actualModelInfo?.provider || "?"}</span>
                           </div>
                           <div className="flex items-center justify-between">
                             <span className="text-[10px] text-muted-foreground">成本</span>
@@ -263,7 +265,7 @@ function PlaygroundContent() {
                           </div>
                           <div className="flex items-center justify-between">
                             <span className="text-[10px] text-muted-foreground">平均延迟</span>
-                            <span className="text-[10px] font-mono">{actualModelInfo?.avg_latency_ms || entry.routing.latency || "?"}ms</span>
+                            <span className="text-[10px] font-mono">{entry.routing.contract_avg_latency_ms || actualModelInfo?.avg_latency_ms || entry.routing.latency || "?"}ms</span>
                           </div>
                         </div>
                       </div>
@@ -305,6 +307,9 @@ function PlaygroundContent() {
                     </div>
 
                     {/* Response */}
+                    <div className="bg-secondary/40 border border-border/50 rounded-lg px-3 py-2 text-[10px] text-muted-foreground">
+                      当前简单、中等、复杂模型默认分别由：deepseek-flash、deepseek-flash、deepseek-v4-pro 回复（DeepSeek 直连，已关闭思考模式）。
+                    </div>
                     <div className="bg-primary/5 border border-primary/10 rounded-lg p-3 text-xs leading-relaxed whitespace-pre-wrap max-h-[300px] overflow-y-auto">
                       {entry.response}
                     </div>

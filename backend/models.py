@@ -24,6 +24,7 @@ class CustomerProfile(BaseModel):
     performance: CustomerPerformance
     routing_preferences: dict[str, list[str]]  # {"simple": [...], "medium": [...], "complex": [...]}
     warnings: list = []  # list of str or {"type", "severity", "message"} dicts
+    extraction: dict = {}  # 抽取观测数据：mode / llm_calls / tokens / cost / elapsed_ms
     created_at: str = ""
 
     def model_post_init(self, __context):
@@ -106,6 +107,7 @@ class ChatMessage(BaseModel):
 
 def slugify(name: str) -> str:
     slug = name.lower().strip()
-    slug = re.sub(r'[^a-z0-9]+', '-', slug)
+    # 保留中文字符与 ASCII 字母数字下划线，其余替换为连字符
+    slug = re.sub(r'[^\w\u4e00-\u9fff]+', '-', slug, flags=re.UNICODE)
     slug = slug.strip('-')
     return slug

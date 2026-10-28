@@ -1,11 +1,23 @@
 import json
 import logging
+import time
 from pathlib import Path
 
 import httpx
 
-from backend.config import OPENROUTER_API_KEY, OPENROUTER_BASE_URL, EXTRACTION_MODEL, FALLBACK_PROFILES_DIR
+from backend.config import (
+    DEEPSEEK_API_KEY,
+    DEEPSEEK_BASE_URL,
+    DEEPSEEK_DISABLE_THINKING,
+    EXTRACTION_MODEL,
+    FALLBACK_PROFILES_DIR,
+)
 from backend.models import CustomerProfile, slugify
+from backend.services.profile_policy import (
+    build_extraction_metrics,
+    normalize_warnings,
+    sanitize_routing_preferences,
+)
 from backend.services.provider_registry import get_active_catalog
 
 logger = logging.getLogger(__name__)
@@ -71,13 +83,11 @@ RULES:
    - forbidden_providers: only if contract EXPLICITLY bans a provider (e.g. "China-based" → ["deepseek"])
    - allowed_providers: only if contract EXPLICITLY restricts to specific providers. Empty [] means all allowed.
 
-4. ROUTING PREFERENCES — MUST respect model tiers:
+4. ROUTING PREFERENCES — respect model tiers:
    - The models above are grouped by tier (simple/medium/complex). This is their CONFIGURED tier.
-   - routing_preferences["simple"] MUST only contain models from the "simple" tier list
-   - routing_preferences["medium"] MUST only contain models from the "medium" tier list
-   - routing_preferences["complex"] MUST only contain models from the "complex" tier list
+   - routing_preferences["simple"]/["medium"]/["complex"] should PREFER models from that tier's list
+   - If a tier has NO compatible model after applying constraints, reuse the best compatible model from an adjacent tier and add a model_gap warning
    - Pick 1-2 models per tier that are compatible with the contract constraints (allowed providers, region)
-   - Do NOT put a medium-tier model into the complex routing preference or vice versa
 
 5. LATENCY: use contract value if specified, else default: low_latency=1000, high_quality=5000, low_cost=3000
 
@@ -89,6 +99,44 @@ RULES:
    - contract_ambiguity: contract is unclear about a routing-relevant requirement
    - Do NOT warn about compliance, legal, auditing, retention, or anything outside AI routing
    - severity "critical" = blocks routing, "warning" = degraded routing, "info" = FYI"""
+
+
+async def _chat(client: httpx.AsyncClient, messages: list[dict]) -> tuple[str, dict]:
+    """调用 DeepSeek，返回（回复文本, usage）。"""
+    response = await client.post(
+        f"{DEEPSEEK_BASE_URL}/chat/completions",
+        headers={
+            "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
+            "Content-Type": "application/json",
+        },
+        json={
+            "model": EXTRACTION_MODEL,
+            "messages": messages,
+            "temperature": 0.0,
+            "max_tokens": 1200,
+            **({"thinking": {"type": "disabled"}} if DEEPSEEK_DISABLE_THINKING else {}),
+        },
+    )
+    response.raise_for_status()
+    data = response.json()
+    return data["choices"][0]["message"]["content"] or "", data.get("usage") or {}
+
+
+def _parse_profile_json(content: str) -> dict:
+    """把模型输出解析为 JSON 对象，容忍 markdown 代码围栏。"""
+    text = (content or "").strip()
+
+    # Strip markdown code blocks if present
+    if text.startswith("```"):
+        text = text.split("\n", 1)[1] if "\n" in text else text[3:]
+        if text.endswith("```"):
+            text = text[:-3]
+        text = text.strip()
+
+    data = json.loads(text)
+    if not isinstance(data, dict):
+        raise ValueError("extraction output is not a JSON object")
+    return data
 
 
 async def extract_profile(
@@ -118,39 +166,43 @@ async def extract_profile(
         available_providers=", ".join(providers),
     )
 
+    started = time.perf_counter()
+    prompt_tokens = 0
+    completion_tokens = 0
+    llm_calls = 0
+
     try:
-        async with httpx.AsyncClient(timeout=60.0) as client:
-            response = await client.post(
-                f"{OPENROUTER_BASE_URL}/chat/completions",
-                headers={
-                    "Authorization": f"Bearer {OPENROUTER_API_KEY}",
-                    "Content-Type": "application/json",
-                    "HTTP-Referer": "https://modelgate.app",
-                    "X-Title": "ModelGate",
-                },
-                json={
-                    "model": EXTRACTION_MODEL,
-                    "messages": [{"role": "user", "content": prompt}],
-                    "temperature": 0.0,
-                    "max_tokens": 1200,
-                },
-            )
-            response.raise_for_status()
+        async with httpx.AsyncClient(timeout=180.0) as client:
+            content, usage = await _chat(client, [{"role": "user", "content": prompt}])
+            llm_calls += 1
+            prompt_tokens += int(usage.get("prompt_tokens") or 0)
+            completion_tokens += int(usage.get("completion_tokens") or 0)
+            try:
+                profile_data = _parse_profile_json(content)
+            except (json.JSONDecodeError, ValueError) as e:
+                # 模型输出不是合法 JSON：追加一轮修复提示，避免直接失败
+                logger.warning(f"Extraction output is not valid JSON ({e}); retrying with repair prompt")
+                repair_messages = [{"role": "user", "content": prompt}]
+                if content.strip():
+                    repair_messages.append({"role": "assistant", "content": content})
+                repair_messages.append(
+                    {
+                        "role": "user",
+                        "content": (
+                            "Your previous output is not valid JSON. Reply with ONLY the raw JSON object "
+                            "required by the original instructions. No markdown fences, no explanation."
+                        ),
+                    }
+                )
+                content, usage = await _chat(client, repair_messages)
+                llm_calls += 1
+                prompt_tokens += int(usage.get("prompt_tokens") or 0)
+                completion_tokens += int(usage.get("completion_tokens") or 0)
+                profile_data = _parse_profile_json(content)
 
-        data = response.json()
-        content = data["choices"][0]["message"]["content"].strip()
-
-        # Strip markdown code blocks if present
-        if content.startswith("```"):
-            content = content.split("\n", 1)[1] if "\n" in content else content[3:]
-            if content.endswith("```"):
-                content = content[:-3]
-            content = content.strip()
-
-        profile_data = json.loads(content)
         customer_id = slugify(customer_name)
 
-        return CustomerProfile(
+        profile = CustomerProfile(
             customer_id=customer_id,
             customer_name=profile_data.get("customer_name", customer_name),
             use_case=profile_data.get("use_case", "general"),
@@ -165,11 +217,30 @@ async def extract_profile(
             warnings=profile_data.get("warnings", []),
         )
 
+        # 单次抽取同样经过合规清理与 warning 归一化，避免绕过 Agent 的校验
+        sanitize_routing_preferences(profile)
+        normalize_warnings(profile)
+        profile.extraction = build_extraction_metrics(
+            mode="single_shot",
+            llm_calls=llm_calls,
+            prompt_tokens=prompt_tokens,
+            completion_tokens=completion_tokens,
+            elapsed_ms=int((time.perf_counter() - started) * 1000),
+        )
+        return profile
+
     except Exception as e:
-        logger.error(f"Extraction failed: {e}")
+        logger.error(f"Extraction failed: {type(e).__name__}: {e!r}")
         fallback = _load_fallback(customer_name)
         if fallback:
             logger.info(f"Using fallback profile for {customer_name}")
+            fallback.extraction = build_extraction_metrics(
+                mode="fallback_file",
+                llm_calls=llm_calls,
+                prompt_tokens=prompt_tokens,
+                completion_tokens=completion_tokens,
+                elapsed_ms=int((time.perf_counter() - started) * 1000),
+            )
             return fallback
         raise
 

@@ -20,39 +20,7 @@ def route(profile: CustomerProfile, prompt: str, tier_override: str | None = Non
     # Get the set of enabled models (respects admin toggles)
     enabled_models = set(get_enabled_models())
 
-    eliminated: dict[str, str] = {}
-    valid_candidates: list[str] = []
-
-    for model_name in candidates:
-        if model_name not in enabled_models:
-            eliminated[model_name] = "model disabled by admin"
-            continue
-
-        model_info = get_model_info(model_name)
-        if model_info is None:
-            eliminated[model_name] = "model not found in registry"
-            continue
-
-        provider = model_info["provider"]
-
-        if provider in profile.constraints.forbidden_providers:
-            eliminated[model_name] = f"provider '{provider}' forbidden by contract"
-            continue
-
-        if (
-            profile.constraints.allowed_providers
-            and provider not in profile.constraints.allowed_providers
-        ):
-            eliminated[model_name] = f"provider '{provider}' not in allowed list"
-            continue
-
-        if profile.constraints.region != "any":
-            required_region = profile.constraints.region.replace("-only", "")
-            if required_region not in model_info.get("regions", []):
-                eliminated[model_name] = f"region '{required_region}' not supported"
-                continue
-
-        valid_candidates.append(model_name)
+    valid_candidates, eliminated = _evaluate_candidates(profile, candidates, enabled_models)
 
     # If all candidates eliminated, try escalating tier
     if not valid_candidates:
@@ -101,6 +69,55 @@ def route(profile: CustomerProfile, prompt: str, tier_override: str | None = Non
         candidates_considered=candidates,
         candidates_eliminated=eliminated,
     )
+
+
+def _evaluate_candidates(
+    profile: CustomerProfile,
+    candidates: list[str],
+    enabled_models: set[str] | None = None,
+) -> tuple[list[str], dict[str, str]]:
+    """对给定候选列表逐项做策略过滤，返回 (通过约束的候选, {被淘汰模型: 原因})。
+
+    该函数不含打分与兜底逻辑，供 route() 与 onboarding 校验（check_profile）复用。
+    """
+    if enabled_models is None:
+        enabled_models = set(get_enabled_models())
+
+    eliminated: dict[str, str] = {}
+    valid_candidates: list[str] = []
+
+    for model_name in candidates:
+        if model_name not in enabled_models:
+            eliminated[model_name] = "model disabled by admin"
+            continue
+
+        model_info = get_model_info(model_name)
+        if model_info is None:
+            eliminated[model_name] = "model not found in registry"
+            continue
+
+        provider = model_info["provider"]
+
+        if provider in profile.constraints.forbidden_providers:
+            eliminated[model_name] = f"provider '{provider}' forbidden by contract"
+            continue
+
+        if (
+            profile.constraints.allowed_providers
+            and provider not in profile.constraints.allowed_providers
+        ):
+            eliminated[model_name] = f"provider '{provider}' not in allowed list"
+            continue
+
+        if profile.constraints.region != "any":
+            required_region = profile.constraints.region.replace("-only", "")
+            if required_region not in model_info.get("regions", []):
+                eliminated[model_name] = f"region '{required_region}' not supported"
+                continue
+
+        valid_candidates.append(model_name)
+
+    return valid_candidates, eliminated
 
 
 def _passes_policy(model_info: dict, profile: CustomerProfile) -> bool:

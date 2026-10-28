@@ -195,6 +195,30 @@ function ProfileResult({
           ))}
         </div>
 
+        {/* ── extraction observability ── */}
+        {profile.extraction && (
+          <div className="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-lg border border-border/30 bg-secondary/10 px-3 py-2 text-[9px] font-mono text-muted-foreground">
+            <span className="uppercase tracking-widest text-muted-foreground/60">抽取</span>
+            <span>{profile.extraction.mode === "react" ? "ReAct Agent" : "单次抽取"}</span>
+            <span>{profile.extraction.llm_calls ?? 0} 次调用</span>
+            <span>{(profile.extraction.total_tokens ?? 0).toLocaleString()} tokens</span>
+            <span>{profile.extraction.elapsed_ms ?? 0}ms</span>
+            <span>
+              {profile.extraction.estimated_cost_usd != null
+                ? `$${profile.extraction.estimated_cost_usd.toFixed(4)}`
+                : "成本未配置"}
+            </span>
+            {profile.extraction.fallback_from && (
+              <span className="text-amber-400">已回退单次抽取</span>
+            )}
+            {profile.extraction.finalized_by === "forced" && (
+              <span className="text-amber-400">
+                预算触发收敛（{profile.extraction.budget_hit}）
+              </span>
+            )}
+          </div>
+        )}
+
         {/* ── constraints row ── */}
         <div className="grid grid-cols-2 gap-2">
           <div className="bg-secondary/20 border border-border/30 rounded-lg px-3 py-2.5">

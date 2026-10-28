@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from backend.database import init_db
 from backend.services.classifier import load_classifier, is_model_loaded
-from backend.routers import customers, extraction, proxy, logs, models
+from backend.routers import customers, extraction, proxy, logs, models, playground
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -51,6 +51,7 @@ app.include_router(extraction.router)
 app.include_router(proxy.router)
 app.include_router(logs.router)
 app.include_router(models.router)
+app.include_router(playground.router)
 
 
 @app.get("/health")

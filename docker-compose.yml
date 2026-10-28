@@ -8,6 +8,8 @@ services:
     ports:
       - "8000:8000"
       - "3000:3000"
+    env_file:
+      - .env
     environment:
       - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
     volumes:

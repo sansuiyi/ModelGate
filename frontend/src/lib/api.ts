@@ -122,3 +122,48 @@ export async function sendPrompt(
     } as Record<string, string>,
   };
 }
+
+// Playground 专用：路由决策按客户合同展示，实际回复用 DeepSeek 直连模型
+export async function sendPlaygroundPrompt(
+  customerId: string,
+  prompt: string
+): Promise<{ response: string; routing: Record<string, string> }> {
+  const res = await fetch(`${getApiBase()}/playground/chat?customer_id=${encodeURIComponent(customerId)}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      model: "auto",
+      messages: [{ role: "user", content: prompt }],
+    }),
+  });
+  if (!res.ok) throw new Error(`Playground error: ${res.status}`);
+
+  const data = await res.json();
+  let routing: Record<string, string> = {
+    model: res.headers.get("x-model-used") || "unknown",
+    classification: res.headers.get("x-classification") || "unknown",
+    latency: res.headers.get("x-latency-ms") || "0",
+    ttft: res.headers.get("x-ttft-ms") || "0",
+    classifyMs: res.headers.get("x-classify-ms") || "0",
+    cost: res.headers.get("x-cost") || "0",
+  };
+
+  const routingHeader = res.headers.get("x-routing-decision");
+  if (routingHeader) {
+    try {
+      const parsed = JSON.parse(routingHeader);
+      routing = { ...routing, ...parsed };
+    } catch {}
+  }
+
+  const usage = data.usage || {};
+  return {
+    response: data.choices?.[0]?.message?.content || "",
+    routing: {
+      ...routing,
+      tokens: String(usage.total_tokens || 0),
+      input_tokens: String(usage.prompt_tokens || 0),
+      output_tokens: String(usage.completion_tokens || 0),
+    } as Record<string, string>,
+  };
+}

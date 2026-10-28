@@ -1,11 +1,12 @@
 import json
-import re
 import logging
-from pathlib import Path
+
+import httpx
+
+from backend.config import OLLAMA_BASE_URL, OLLAMA_CLASSIFIER_MODEL
 
 logger = logging.getLogger(__name__)
 
-_model = None
 _model_loaded = False
 
 ROUTE_POLICIES = [
@@ -25,37 +26,21 @@ ROUTE_POLICIES = [
 
 
 def load_classifier():
-    global _model, _model_loaded
+    global _model_loaded
     try:
-        from llama_cpp import Llama
-        from backend.config import CLASSIFIER_GGUF_PATH, CLASSIFIER_N_CTX, CLASSIFIER_N_GPU_LAYERS
-
-        if not Path(CLASSIFIER_GGUF_PATH).exists():
-            logger.warning(f"GGUF model not found at {CLASSIFIER_GGUF_PATH}")
-            logger.warning("Falling back to heuristic classifier")
-            _model_loaded = False
-            return
-
-        logger.info(f"Loading GGUF classification model: {CLASSIFIER_GGUF_PATH}")
-        _model = Llama(
-            model_path=CLASSIFIER_GGUF_PATH,
-            n_ctx=CLASSIFIER_N_CTX,
-            n_gpu_layers=CLASSIFIER_N_GPU_LAYERS,
-            verbose=False,
-        )
+        with httpx.Client(base_url=OLLAMA_BASE_URL, timeout=10.0) as client:
+            resp = client.post(
+                "/api/show",
+                json={"model": OLLAMA_CLASSIFIER_MODEL},
+            )
+            resp.raise_for_status()
         _model_loaded = True
-        logger.info(f"GGUF model loaded (n_gpu_layers={CLASSIFIER_N_GPU_LAYERS}) — running warmup...")
-
-        # Warmup: one inference to initialize CUDA context
-        warmup_prompt = _build_arch_prompt("Hello, what is your return policy?")
-        _model.create_chat_completion(
-            messages=[{"role": "user", "content": warmup_prompt}],
-            max_tokens=10,
-            temperature=0,
+        logger.info(
+            f"Ollama classifier ready: model={OLLAMA_CLASSIFIER_MODEL} "
+            f"({OLLAMA_BASE_URL})"
         )
-        logger.info("Classification model warmed up and ready")
     except Exception as e:
-        logger.warning(f"Failed to load classification model: {e}")
+        logger.warning(f"Failed to reach Ollama classifier: {e}")
         logger.warning("Falling back to heuristic classifier")
         _model_loaded = False
 
@@ -75,23 +60,40 @@ def classify_prompt(prompt: str) -> str:
         try:
             return _arch_router_classify(prompt)
         except Exception as e:
-            logger.warning(f"Arch Router classification failed: {e}, using heuristic")
+            logger.warning(f"Ollama classification failed: {e}, using heuristic")
     return heuristic_classify(prompt)
 
 
 def _arch_router_classify(prompt: str) -> str:
     arch_prompt = _build_arch_prompt(prompt)
 
-    output = _model.create_chat_completion(
-        messages=[{"role": "user", "content": arch_prompt}],
-        max_tokens=30,
-        temperature=0,
-    )
+    with httpx.Client(base_url=OLLAMA_BASE_URL, timeout=120.0) as client:
+        resp = client.post(
+            "/api/chat",
+            json={
+                "model": OLLAMA_CLASSIFIER_MODEL,
+                "messages": [{"role": "user", "content": arch_prompt}],
+                "stream": False,
+                "options": {"temperature": 0},
+            },
+        )
+        resp.raise_for_status()
 
-    response = output["choices"][0]["message"]["content"].strip()
+    response = resp.json()["message"]["content"].strip()
 
+    # Ollama 的 qwen2 模型有时返回单引号 JSON，先规范化
     try:
         parsed = json.loads(response)
+        route = parsed.get("route", "medium")
+        if route in ("simple", "medium", "complex"):
+            return route
+    except json.JSONDecodeError:
+        pass
+
+    # 兼容单引号 JSON：{'route': 'simple'}
+    try:
+        normalized = response.replace("'", '"')
+        parsed = json.loads(normalized)
         route = parsed.get("route", "medium")
         if route in ("simple", "medium", "complex"):
             return route
